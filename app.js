@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var commonVars = {};
-  commonVars.url = 'http://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&location=48732&distance=10&output=full';
+  commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&location=48732&distance=10&output=full';
 
   $('.newPet').on("click", function() {
     
@@ -17,7 +17,7 @@ $(document).ready(function() {
         var petfinder = data.petfinder;
         
         //alert(JSON.stringify(petfinder, '', 2));
-        commonVars.url = 'http://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&location=48732&distance=10&output=full';
+        commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&location=48732&distance=10&output=full';
         commonVars.url += '&offset=' + petfinder.lastOffset.$t;
 
         commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
@@ -56,7 +56,7 @@ $(document).ready(function() {
   ////INFO CALL
 
   $('#petfinderInfo').on("mouseenter", "#info", function(e) {
-      commonVars.shelterLink = 'http://api.petfinder.com/shelter.get?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&id=' + commonVars.shelterID + '&output=full';
+      commonVars.shelterLink = 'https://api.petfinder.com/shelter.get?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&id=' + commonVars.shelterID + '&output=full';
       $('.splash').addClass('hidden');
       $.ajax({
         type: 'GET',
