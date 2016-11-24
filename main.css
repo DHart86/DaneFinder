@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
 h3 {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 30px;
@@ -72,13 +75,21 @@ ul {
   margin-top: 0px;
 }
 
+@media screen and (min-width:500px) {
+    img { min-width: 450px; }
+}
+
 img {
+  object-fit: none;
+  object-position: center;
   border-radius: 25px;
   float: left;
   margin-right: 10px;
-  width: 50%;
+  width: auto;
   max-height: 450px;
+  max-width: 100%;
   border: 2px solid black;
+  height: auto;
 }
 
 input {
@@ -88,59 +99,77 @@ input {
 .newPet {
   width: 100%;
   height: 40px;
-  background-color: #D94342;
+  background-color: #DB232A;
+  z-index: 2;
 }
 
 #info {
   width: 100%;
-  background-color: black;
+  background-color: #2C3E50;
   color: white;
-  border: 5px solid #D94342;
+  border: 1px solid lightblue;
   padding: 10px;
-  height: 70px;
+  height: 50px;
   margin-top: 40px;
   margin-bottom: 5px;
-  font-size: 20px;
-  border-radius: 3px;
+  font-size: 24px;
 }
 
 #info:hover {
-  color: #B9121B;
+  color: #DB232A;
 }
 
 #nextPet {
-  position: fixed;
-  right: -2px;
+  
+  right: -5px;
   top: -5px;
-  width: 300px;
-  height: 100px;
-  border-bottom-left-radius: 25px;
+  width: 100%;
+  height: 60px;
+  border-bottom-right-radius: 25px;
   color: white;
-  font-size: 40px;
-  box-shadow: -2px 2px 10px black;
-  background-image: url(animal-1293792_640.png);
-  background-repeat: no-repeat;
-  background-position: 85% 50%;
-  font-family: 'Bubblegum Sans', cursive;
-  text-align: left;
-  padding-left: 30px;
-
+  font-size: 30px;
+  box-shadow: -2px 2px 5px gray;
 }
 
+
+#prevBtn {
+  right: -5px;
+  top: -5px;
+  width: 200px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  color: white;
+  font-size: 30px;
+  box-shadow: -2px 2px 5px gray;
+  background-color: #DB232A;
+  width: 100%;
+}
+
+
+.reset {
+  width: 100%;
+  left: -5px;
+  top: -5px;
+  
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px gray;
+  background-color: #DB232A;
+}
 
 #adopt {
   width: 100%;
-  background-color: #D94342;
+  background-color: #DB232A;
   color: white;
-  border: 5px solid black;
+  border: 1px solid black;
   padding: 10px;
-  height: 70px;
-  font-size: 20px;
-  border-radius: 3px;
+  height: 50px;
+  font-size: 24px;
 }
 
 #adopt:hover {
-  color: black;
+  color: #2C3E50;
 }
 
 .hidden {
@@ -165,7 +194,6 @@ p {
   font-size: 18px;
   text-align: right;
   margin-right: 10px;
-  
 }
 
 .closeX {
@@ -178,17 +206,19 @@ p {
 }
 
 .xHover {
-  text-shadow: -2px -2px 20px white;
+  text-shadow: -2px -2px 20px #DB232A;
 }
+
 #rowAnchor {
   position: relative;
 }
+
 .splash {
   position: absolute;
   background-color: white;
   width: 1000px;
   left: 0px;
-  height: 800px;
+  height: 100;
 }
 
 #splashButton {
@@ -200,7 +230,7 @@ p {
   height: 200px;
   font-size: 80px;
   font-family: 'Bubblegum Sans', cursive;
-  background-color: #D94342;
+  background-color: #DB232A;
   border-radius: 24px;
   color: white;
   border: 6px double white;
@@ -208,5 +238,96 @@ p {
 }
 
 a {
-  color: #F04A49;
+  color: #B9121B;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #FC4349;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+input {
+  margin: 0px;
+  width: 35%;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bouncyText {
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+button {
+  font-family: 'Bubblegum Sans', cursive;
+}
+.reset {
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+pre {
+    white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */
+  color: #333
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  background: yellow;
+  
+  opacity: .9;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(40%);
+  border: 5px solid #B9121B
+}
+
+#zip {
+  background-color: white;
+  color: #2C3E50;
+  border-color: #E36D6F;
+  padding: 5px;
+    }
+#zip:focus {
+  background-color: cream;
+}
+
+::-webkit-input-placeholder {
+   color: #E34446;
+}
+
+.splash {
+  background-color: #DCDDD8;
+}
+
+#amItem {
+  width: auto;
+  height: 200px;
+  background-color: blue;
+  margin: 1px;
+}
+
+#workDammit {
+  background-color: red;
+  height: 500px;
 }

@@ -5,20 +5,64 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20"></script>
+	<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+	<meta charset="UTF-8">
 </head>
 <body>
-<div class="row" id="rowAnchor">
-  <button class="newPet" id="nextPet">More!</button>
-  <div class="splash">
-    <button class="newPet" id="splashButton">Dane Finder</button>
+<div class="row">
+  <div class="col-4">
+    <button id="prevBtn" class="hidden">Prev</button>
   </div>
-  
-  <div class="col-12" id="petfinderInfo">
-    <div id="information">
-     
-    </div>
-   </div>
+  <div class="col-4">
+    <button type="reset"  onClick="window.location.reload()" class="reset hidden">Home</button>
+  </div>
+  <div class="col-4">
+    <button class="newPet hidden" id="nextPet">Next ></button>
+  </div>
 </div>
+
+
+<div class="row" id="rowAnchor">
+  <div class="splash">
+    <form id="formID">
+      <button class="newPet" id="splashButton" type="submit">Dane Finder</button>
+      <h4>Find Local, Rescuable Great Danes in your area!</h4>
+      <input id="zip" maxlength="5" placeholder="Enter ZIP and click the big red button!" type="number" required /><br>
+    </form>
+  </div>
+
+<div class="col-12" id="petfinderInfo">
+    <div id="information">
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div id="amItem">
+    </div>
+  </div>
+  <div class="col-3">
+    <div id="amItem">
+    </div>
+  </div>
+  <div class="col-3">
+    <div id="amItem">
+    </div>
+  </div>
+  <div class="col-3">
+    <div id="amItem">
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-12" id="workDammit">
+  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20"></script>
+</div>
+</div>
+
 
 
     
