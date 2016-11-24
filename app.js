@@ -32,10 +32,10 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
 
 
 
-  
+
   var commonVars = {};
   commonVars.offSet = 0;
-  commonVars.url = 'http://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full&location='
+  commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full&location='
 
   $('.newPet').on("click", function(e) {
     if ($('#zip').val().length == 5) {
@@ -52,7 +52,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
       success: function(data) {
         var petfinder = data.petfinder;
         //alert(JSON.stringify(commonVars.offSet, '', 2));
-        commonVars.url = 'http://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
+        commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
         
         
           //alert(JSON.stringify(petfinder.pets.pet.media.photos, '', 2));
@@ -108,7 +108,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
       success: function(data) {
         var petfinder = data.petfinder;
         //alert(JSON.stringify(commonVars.offSet, '', 2));
-        commonVars.url = 'http://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
+        commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
         
         
           //alert(JSON.stringify(commonVars.offSet, '', 2));
@@ -154,7 +154,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
   ////INFO CALL
 
   $('#petfinderInfo').on("mouseenter", "#info", function(e) {
-    commonVars.shelterLink = 'http://api.petfinder.com/shelter.get?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&id=' + commonVars.shelterID + '&output=full';
+    commonVars.shelterLink = 'https://api.petfinder.com/shelter.get?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&id=' + commonVars.shelterID + '&output=full';
     $('.splash').addClass('hidden');
     $.ajax({
       type: 'GET',
