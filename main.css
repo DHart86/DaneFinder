@@ -115,7 +115,7 @@ input {
 
 #info {
   width: 100%;
-  background-color: #173e43;
+  background-color: #E36D6F;
   color: white;
   border: 1px solid lightblue;
   padding: 10px;
@@ -126,7 +126,7 @@ input {
 }
 
 #info:hover {
-  color: #3fb0ac;
+  color: #2A8598;
 }
 
 #nextPet {
@@ -181,7 +181,7 @@ input {
 }
 
 #adopt:hover {
-  color: #173e43;
+  color: #E36D6F;
 }
 
 .hidden {
