@@ -68,6 +68,7 @@ body {
 
 #petfinderInfo {
   position: relative;
+  padding-top: 20px;
 }
 
 ul {
@@ -75,11 +76,20 @@ ul {
   margin-top: 0px;
 }
 
-@media screen and (min-width:500px) {
-    img { min-width: 450px; }
+@media screen and (max-width:500px) {
+  #splashButton {
+    min-width: 100%;
+  }
 }
 
-img {
+@media screen and (min-width:500px) {
+  #splashButton {
+    min-width: 500px;
+  }
+    .petPic { min-width: 450px; max-width: 100%; }
+}
+
+.petPic {
   object-fit: none;
   object-position: center;
   border-radius: 25px;
@@ -99,13 +109,13 @@ input {
 .newPet {
   width: 100%;
   height: 40px;
-  background-color: #DB232A;
+  
   z-index: 2;
 }
 
 #info {
   width: 100%;
-  background-color: #2C3E50;
+  background-color: #173e43;
   color: white;
   border: 1px solid lightblue;
   padding: 10px;
@@ -116,11 +126,10 @@ input {
 }
 
 #info:hover {
-  color: #DB232A;
+  color: #3fb0ac;
 }
 
 #nextPet {
-  
   right: -5px;
   top: -5px;
   width: 100%;
@@ -131,6 +140,9 @@ input {
   box-shadow: -2px 2px 5px gray;
 }
 
+#nextPet:hover {
+  background-color: #45C2BD;
+}
 
 #prevBtn {
   right: -5px;
@@ -141,26 +153,26 @@ input {
   color: white;
   font-size: 30px;
   box-shadow: -2px 2px 5px gray;
-  background-color: #DB232A;
   width: 100%;
+}
+
+#prevBtn:hover {
+  background-color: #45C2BD;
 }
 
 
 .reset {
   width: 100%;
-  left: -5px;
-  top: -5px;
-  
   height: 60px;
   color: white;
   font-size: 30px;
   box-shadow: 2px 2px 5px gray;
-  background-color: #DB232A;
 }
-
+.reset:hover {
+  background-color: #45C2BD;
+}
 #adopt {
   width: 100%;
-  background-color: #DB232A;
   color: white;
   border: 1px solid black;
   padding: 10px;
@@ -169,7 +181,7 @@ input {
 }
 
 #adopt:hover {
-  color: #2C3E50;
+  color: #173e43;
 }
 
 .hidden {
@@ -196,27 +208,30 @@ p {
   margin-right: 10px;
 }
 
-.closeX {
+#spinny {
   font-size: 60px;
   position: absolute;
   right: 40px;
   bottom: 20px;
   color: white;
   font-weight: bold;
+  transition: all 1.2s;
+  transition-timing: ease-in-out;
 }
 
-.xHover {
-  text-shadow: -2px -2px 20px #DB232A;
-}
+#spinny:hover {
+    transform: rotate(720deg);
+    text-shadow: -2px -2px 20px #DB232A;
+  }
 
 #rowAnchor {
   position: relative;
 }
 
 .splash {
-  position: absolute;
+  padding-top: 20px;
   background-color: white;
-  width: 1000px;
+  width: auto;
   left: 0px;
   height: 100;
 }
@@ -224,13 +239,13 @@ p {
 #splashButton {
   margin-top: 50px;
   width: 50%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   display: block;
   height: 200px;
   font-size: 80px;
   font-family: 'Bubblegum Sans', cursive;
-  background-color: #DB232A;
+  background-color: #3fb0ac;
   border-radius: 24px;
   color: white;
   border: 6px double white;
@@ -238,12 +253,12 @@ p {
 }
 
 a {
-  color: #B9121B;
+  color: #c43235;
   font-weight: bold;
 }
 
 a:hover {
-  color: #FC4349;
+  color: #F23E42;
 }
 
 form {
@@ -251,6 +266,7 @@ form {
   margin-right: auto;
   text-align: center;
   padding-bottom: 50px;
+  
 }
 
 input {
@@ -288,46 +304,93 @@ pre {
     white-space: -o-pre-wrap; /* Opera */
     white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
     word-wrap: break-word; /* IE 5.5+ */
-  color: #333
 }
 
 #map {
   width: 100%;
   height: 400px;
-  background: yellow;
-  
+  background: #fae596;
   opacity: .9;
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(40%);
-  border: 5px solid #B9121B
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
-#zip {
+#map:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+#mapBorder {
+  background-color: #c43235;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+input , select {
   background-color: white;
   color: #2C3E50;
   border-color: #E36D6F;
   padding: 5px;
+  margin-bottom: 4px;
     }
+
+select {
+  color: #E36D6F;
+}
+
+#zip , select {
+  border: 2px solid #3fb0ac;
+  padding: 10px;
+  font-size: 17px;
+}
+
 #zip:focus {
-  background-color: cream;
+  font-weight: bold;
+}
+
+select:hover, option {
+  font-weight: bold;
 }
 
 ::-webkit-input-placeholder {
    color: #E34446;
 }
 
-.splash {
-  background-color: #DCDDD8;
-}
+
 
 #amItem {
   width: auto;
   height: 200px;
-  background-color: blue;
   margin: 1px;
+  text-align: center;
 }
 
 #workDammit {
-  background-color: red;
   height: 500px;
+}
+
+button {
+  background-color: #3fb0ac;
+}
+
+button:hover { 
+}
+
+#workDammit > img {
+  border: 5px solid blue;
+}
+
+.spinX {
+  transform: rotate(360deg);
+  transition: transform .4s linear;
+}
+
+.closeX {
+  transform: rotate(-0deg);
+  transition: transform .4s linear;
+}
+
+#resourceImg {
+  height: 150px;
+  width: auto;
 }

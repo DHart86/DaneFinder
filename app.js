@@ -1,38 +1,5 @@
 $(document).ready(function() {
   
-
-
-
-
-amzn_assoc_placement = "adunit0";
-amzn_assoc_search_bar = "true";
-amzn_assoc_tracking_id = "danefinder-20";
-amzn_assoc_search_bar_position = "bottom";
-amzn_assoc_ad_mode = "search";
-amzn_assoc_ad_type = "smart";
-amzn_assoc_marketplace = "amazon";
-amzn_assoc_region = "US";
-amzn_assoc_title = "Shop Related Products";
-amzn_assoc_default_search_phrase = "great dane";
-amzn_assoc_default_category = "All";
-amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   var commonVars = {};
   commonVars.offSet = 0;
   commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full&location='
@@ -42,6 +9,8 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
     e.preventDefault();
     commonVars.offSet ++
     commonVars.zip = $('#zip').val();
+    commonVars.radius = $('#zipRadius').val();  
+    $("#lmgtfy").prop('href', 'https://www.google.com/search?q=great+dane+training+' + commonVars.zip)
     $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
     $.ajax({
@@ -55,8 +24,9 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
         commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
         
         
-          //alert(JSON.stringify(petfinder.pets.pet.media.photos, '', 2));
-        commonVars.url += '&offset=' + commonVars.offSet + '&location=';
+          
+        commonVars.url += '&offset=' + commonVars.offSet + '&distance=' + commonVars.radius + '&location=';
+        //alert(JSON.stringify(commonVars.url, '', 2));
         commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
         commonVars.id = petfinder.pets.pet.id.$t;
         commonVars.name = petfinder.pets.pet.name.$t;
@@ -83,7 +53,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
 
         infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
 
-        $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img src=' + commonVars.pic + '></a>' + infoHTML);
+        $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
      
       },
     })
@@ -112,7 +82,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
         
         
           //alert(JSON.stringify(commonVars.offSet, '', 2));
-        commonVars.url += '&offset=' + commonVars.offSet + '&location=';
+        commonVars.url += '&offset=' + commonVars.offSet + '&distance=' + commonVars.radius + '&location=';
         commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
         commonVars.id = petfinder.pets.pet.id.$t;
         commonVars.name = petfinder.pets.pet.name.$t;
@@ -139,7 +109,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
 
         infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
 
-        $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img src=' + commonVars.pic + '></a>' + infoHTML);
+        $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
       },
     });
   });
@@ -176,7 +146,7 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
   ////       INFO BOX
   ///////
   $("#petfinderInfo").on("click", "#info,#information", function (e) {
-    $('#information').empty().toggleClass('hidden').append('<div class="col-6"><iframe frameborder="0" id="map" src="https://maps.google.com/maps?output=embed&iwloc&z=10&mid=1rTY7Rf5tSCc5FOdtFeeiszRYcNc&&daddr=' + commonVars.lat + ',' + commonVars.long + '"></iframe></div><div class="col-6"><p><strong>Name:</strong> ' + commonVars.name + '<br><strong>Shelter:</strong> ' + commonVars.shelterName + '<br><strong>Location</strong>: ' + commonVars.addy+ '<br>' + commonVars.city + ', ' + commonVars.state + '<br><strong>E-mail: </strong><a href="mailto:' + commonVars.email + '">' + commonVars.email + '</a><br><strong>Phone: </strong> ' + '<a href="tel:+' + commonVars.phone + '">' + commonVars.phone + '</a></p></div><span class="closeX">X</span>');
+    $('#information').empty().toggleClass('hidden').append('<div class="col-6"><div id="mapBorder"><iframe frameborder="0" id="map" src="https://maps.google.com/maps?output=embed&iwloc&z=10&mid=1rTY7Rf5tSCc5FOdtFeeiszRYcNc&&daddr=' + commonVars.lat + ',' + commonVars.long + '"></iframe></div></div><div class="col-6"><p><strong>Name:</strong> ' + commonVars.name + '<br><strong>Shelter:</strong> ' + commonVars.shelterName + '<br><strong>Location</strong>: ' + commonVars.addy+ '<br>' + commonVars.city + ', ' + commonVars.state + '<br><strong>E-mail: </strong><a href="mailto:' + commonVars.email + '">' + commonVars.email + '</a><br><strong>Phone: </strong> ' + '<a href="tel:+' + commonVars.phone + '">' + commonVars.phone + '</a></p></div><span id="spinny">X</span>');
   });
   $('#petfinderInfo').on("mouseover", ".closeX", function(e) {
     $('.closeX').addClass("xHover");
@@ -185,24 +155,18 @@ amzn_assoc_linkid = "250ca789c914b6d9f59e707d79902b91";
     $('.closeX').removeClass("xHover");
   });
 
-  $('#splashButton').on("click", function() {
-    $('#nextPet, .reset, iframe, #prevBtn').removeClass('hidden');
+    $('#splashButton').on("click", function() {
+        if ($('#zip').val().length == 5) {
+    $('#nextPet, .reset, iframe, #prevBtn, #workDammit').removeClass('hidden');
+        }
   })
 
   $('.reset').on("click", function() {
     $('.splash').removeClass('hidden');
+    $('#zip').val() = 0;
   })
-
-  
-  
-  
-  
-  
-  
+ 
 });
-
-//unsed radio
-//var an = $('input[name="anType"]:checked').val()
 
 
 
