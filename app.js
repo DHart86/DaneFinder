@@ -51,7 +51,7 @@ $(document).ready(function() {
         infoHTML += '<br>';
         infoHTML += '<div id="information" class="hidden"></div>';
 
-        infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
+        infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '"><button id="adopt">Take Me Home!</button></a></ul>';
 
         $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
      
@@ -107,7 +107,7 @@ $(document).ready(function() {
         infoHTML += '<br>';
         infoHTML += '<div id="information" class="hidden"></div>';
 
-        infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
+        infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '"><button id="adopt">Take Me Home!</button></a></ul>';
 
         $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
       },
@@ -146,7 +146,8 @@ $(document).ready(function() {
   ////       INFO BOX
   ///////
   $("#petfinderInfo").on("click", "#info,#information", function (e) {
-    $('#information').empty().toggleClass('hidden').append('<div class="col-6"><div id="mapBorder"><iframe frameborder="0" id="map" src="https://maps.google.com/maps?output=embed&iwloc&z=10&mid=1rTY7Rf5tSCc5FOdtFeeiszRYcNc&&daddr=' + commonVars.lat + ',' + commonVars.long + '"></iframe></div></div><div class="col-6"><p><strong>Name:</strong> ' + commonVars.name + '<br><strong>Shelter:</strong> ' + commonVars.shelterName + '<br><strong>Location</strong>: ' + commonVars.addy+ '<br>' + commonVars.city + ', ' + commonVars.state + '<br><strong>E-mail: </strong><a href="mailto:' + commonVars.email + '">' + commonVars.email + '</a><br><strong>Phone: </strong> ' + '<a href="tel:+' + commonVars.phone + '">' + commonVars.phone + '</a></p></div><span id="spinny">X</span>');
+  
+    $('#information').empty().toggleClass('hidden').append('<div class="col-6"><div id="mapBorder"><div class="overlay"><iframe frameborder="0" id="map" src="https://maps.google.com/maps?output=embed&iwloc&z=10&mid=1rTY7Rf5tSCc5FOdtFeeiszRYcNc&&daddr=' + commonVars.lat + ',' + commonVars.long + '"></iframe></div></div></div><div class="col-6"><p><strong>Name:</strong> ' + commonVars.name + '<br><strong>Shelter:</strong> ' + commonVars.shelterName + '<br><strong>Location</strong>: ' + commonVars.addy+ '<br>' + commonVars.city + ', ' + commonVars.state + '<br><strong>E-mail: </strong><a href="mailto:' + commonVars.email + '">' + commonVars.email + '</a><br><strong>Phone: </strong> ' + '<a href="tel:+' + commonVars.phone + '">' + commonVars.phone + '</a></p></div><span id="spinny">X</span>');
   });
   $('#petfinderInfo').on("mouseover", ".closeX", function(e) {
     $('.closeX').addClass("xHover");
@@ -163,11 +164,7 @@ $(document).ready(function() {
 
   $('.reset').on("click", function() {
     $('.splash').removeClass('hidden');
-    $('#zip').val() = 0;
+    $('#zip').val() == 0;
   })
  
 });
-
-
-
-
