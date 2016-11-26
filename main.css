@@ -85,6 +85,7 @@ ul {
 @media screen and (min-width:500px) {
   #splashButton {
     min-width: 500px;
+    margin-top: 50px;
   }
     .petPic { min-width: 450px; max-width: 100%; }
 }
@@ -237,7 +238,7 @@ p {
 }
 
 #splashButton {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
@@ -250,6 +251,7 @@ p {
   color: white;
   border: 6px double white;
   text-shadow: 2px 2px 6px black;
+  text-align: center;
 }
 
 a {
@@ -329,8 +331,6 @@ pre {
 input , select {
   background-color: white;
   color: #2C3E50;
-  border-color: #E36D6F;
-  padding: 5px;
   margin-bottom: 4px;
     }
 
@@ -338,14 +338,19 @@ select {
   color: #E36D6F;
 }
 
+select:focus {
+  border-color: black;
+}
+
 #zip , select {
   border: 2px solid #3fb0ac;
-  padding: 10px;
+  padding: 3px;
   font-size: 17px;
 }
 
 #zip:focus {
   font-weight: bold;
+  border-color: black;
 }
 
 select:hover, option {
