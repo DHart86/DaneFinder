@@ -5,8 +5,9 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
-	<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-	<meta charset="UTF-8" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<!-- <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+	<meta charset="UTF-8" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="row">
@@ -21,62 +22,83 @@
   </div>
 </div>
 
-
 <div class="row" id="rowAnchor">
   <div class="col-12">
-  <div class="splash">
+    <div class="splash">
       <form id="formID">
         <button class="newPet" id="splashButton" type="submit">Dane Finder</button>
         <h4>Find Local, Rescuable Great Danes in your area!</h4>
-    Within <select name="selectDist" id="zipRadius" required>
-  <option value="10">10 miles</option>
-  <option value="25">25 miles</option>
-  <option value="50">50 miles</option>
-  </select>
-       of
-        
+        <div class="row" id="selectWrap">
+          <section title=".squaredOne">
+            <ul>
+              <li><label for="maleCheck"><input type="checkbox" name="options" id="maleCheck" class="checker" value="&sex=M">Male</input></label><label for="femaleCheck"><input type="checkbox" name="options" id="femaleCheck" class="checker" value="&sex=F">Female</input></label></li>
+              <li><label for="youngCheck"><input type="checkbox" name="options" id="youngCheck" class="checker" id="youngCheck" value="&age=baby&age=young">Young</input></label><label for="matureCheck"><input type="checkbox" name="options" id="matureCheck" class="checker" value="&age=adult&age=senior">Mature</input></label></li>
+            </ul>
+          </section>
+        </div>
+        Within <select name="selectDist" id="zipRadius" required>
+  <option value="&distance=10">10 miles</option>
+  <option value="&distance=25">25 miles</option>
+  <option value="&distance=50">50 miles</option>
+  </select> of
+
         <input id="zip" maxlength="5" placeholder="ZIP code" type="number" required /><br>
       </form>
     </div>
   </div>
 
-    <div class="col-12" id="petfinderInfo">
-      <div id="information">
+  <div class="col-12" id="petfinderInfo">
+    <div id="information" class="hidden">
       <div class="overlay" onClick="style.pointerEvents='none'"></div>
-      </div>
-  </div>
-  
-</div>
-
-<div class="row">
-  <div class="col-3">
-    <div id="amItem"><a id="lmgtfy" href='http://www.google.com/'>
-    <h4>Find Local Training!</h4>
-     <img id="resourceImg" src="parking-1421907_1280.png">
-     </a>
-    </div>
-  </div>
-  <div class="col-3">
-    <div id="amItem">
-    <h4>Toys for your pal!</h4>
-    <img id="resourceImg" src="Dog Bone Filled.png">
-    </div>
-  </div>
-  <div class="col-3">
-    <div id="amItem">
-    </div>
-  </div>
-  <div class="col-3">
-    <div id="amItem">
     </div>
   </div>
 </div>
 
+<div class="row hidden" id="resources">
+  <div class="col-3">
+    <div id="amItem">
+      <a id="lmgtfy" target="_blank" href='http://www.google.com/'>
+        <h4>Find Local Training</h4>
+        <img id="resourceImg" src="parking-1421907_1280.png">
+      </a>
+    </div>
+  </div>
+  <div class="col-3">
+    <div id="amItem">
+      <a title="If AdBlock is disabled" id="toys" href="#workDammit">
+        <h4>Toys for your pal</h4>
+        <img id="resourceImg" src="Dog Bone Filled.png">
+      </a>
+    </div>
+  </div>
+  <div class="col-3">
+    <div id="amItem">
+      <a id="groomLink" href="#groomSection">
+        <h4>Best Groomers</h4>
+      </a>
+    </div>
+  </div>
+  <div class="col-3">
+    <div id="amItem">
+      <a id="shelterDonate" href="#donateDiv">
+        <h4 id="shelterH">Help Shelter Pets</h4>
+      </a>
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-12" id="workDammit">
-  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20"></script>
+    <script id="azon"></script>
   </div>
+
+</div>
+
+<div class="groom row hidden" id="groomSection"></div>
+
+<div id="donateDiv" class="hidden">
+  <span id="donateClose">X</span>
+  <iframe id="donate"></iframe>
 </div>
 
 
