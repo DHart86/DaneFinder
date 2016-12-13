@@ -164,7 +164,7 @@ $(document).ready(function(e) {
 
   $('#splashButton').on("click", function(e) {
     if ($('#zip').val().length == 5) {
-      $('#nextPet, #resources, .reset, iframe, #prevBtn').removeClass('hidden');
+      $('#nextPet, #resources, .reset, iframe, #prevBtn, .swipeMessage').removeClass('hidden');
     }
   });
 

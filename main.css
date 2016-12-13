@@ -78,12 +78,13 @@ h3 {
   #zip {
     width: 100%;
   }
-   #nextPet {
-  display: none;
+  #nextPet {
+    display: none;
   }
   #prevBtn {
     display: none;
   }
+
 }
 
 @media screen and (min-width:640px) {
@@ -114,6 +115,14 @@ h3 {
   #splashButton {
     margin-top: 20px;
   }
+  .reset {
+    box-shadow: 2px 2px 5px gray;
+  }
+
+.swipeMessage {
+  display: none;
+}
+
 }
 
 .petPic {
@@ -176,7 +185,6 @@ input {
   box-shadow: -2px 2px 5px gray;
   transition: all 0.5s;
   border: 0px;
-  
 }
 
 #nextPet span {
@@ -254,7 +262,6 @@ input {
   height: 60px;
   color: white;
   font-size: 30px;
-  box-shadow: 2px 2px 5px gray;
   border: 0
 }
 
@@ -550,4 +557,12 @@ label {
 
 ul {
   font-size: 19px;
+}
+
+.swipeMessage {
+  background-color: #E36D6F;
+  color: white;
+  opacity: .5;
+  text-align: center;
+  box-shadow: 2px 2px 5px gray;
 }
