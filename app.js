@@ -95,7 +95,7 @@ $(document).ready(function(e) {
   //////
   ////////////Swipe Right New Pet
 
-  /*$('.col-12').on("swiperight", function(e) {
+  $('.col-12').on("swiperight", function(e) {
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++
@@ -112,22 +112,27 @@ $(document).ready(function(e) {
   
   $('.col-12').on("swipeleft", function(e) {
     e.preventDefault();
-    commonVars.offSet--
+    if (commonVars.offSet !== 0) {
+    commonVars.offSet--;
+  };
       $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
     getter();
   });
   
-  */
+  
 
   /////////
   //PREV BUTTON
 
   $('#prevBtn').on("click", function(e) {
     e.preventDefault();
+    if (commonVars.offSet !== 0) {
     commonVars.offSet--;
+  };
       $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
+
     getter();
   });
 
