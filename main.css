@@ -85,6 +85,10 @@ h3 {
     display: none;
   }
 
+  .petPic {
+    width: 100%;
+      }
+
 }
 
 @media screen and (min-width:640px) {
@@ -131,9 +135,6 @@ h3 {
   border-radius: 25px;
   float: left;
   margin-right: 10px;
-  width: auto;
-  max-height: 450px;
-  max-width: 100%;
   border: 2px solid black;
   height: auto;
   transition: all .8s ease-in-out;
@@ -524,10 +525,8 @@ label {
 
 #donateDiv {
   position: absolute;
-  left: 50%;
   top: 20%;
-  margin-left: -37.5%;
-  width: 80%;
+  width: 100%;
   background-color: white;
   z-index: 4;
   box-shadow: 2px 2px 20px gray
@@ -536,7 +535,7 @@ label {
 #donateClose {
   position: relative;
   color: #DB232A;
-  left: 85%;
+  left: 75%;
   top: 10px;
   display: inline-block;
   font-size: 60px;
