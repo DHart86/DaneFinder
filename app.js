@@ -13,6 +13,7 @@ $(document).ready(function(e) {
   function getter() {
     $.ajax({
       type: 'GET',
+      async: true,
       data: {},
       url: commonVars.url + commonVars.zip + '&offset=' + commonVars.offSet + commonVars.option + commonVars.radius + '&callback=?',
       dataType: 'json',
