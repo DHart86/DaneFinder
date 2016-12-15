@@ -1,5 +1,10 @@
 $(document).ready(function(e) {
 
+
+if (window.navigator.standalone) jQuery.ajaxSetup({isLocal:true});
+
+
+
   var commonVars = {};
   commonVars.offSet = -1;
   commonVars.option = '';
@@ -200,7 +205,6 @@ $(document).ready(function(e) {
   
     $('#toys').on("click", function(e) {
     $('#workDammit').toggleClass('hidden');
-    $('#toys').attr("href","#workDammit");
   }); 
   
   $('#groomLink').on("click", function(e) {
