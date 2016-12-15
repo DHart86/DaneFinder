@@ -36,7 +36,6 @@ $(document).ready(function(e) {
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
 
-    alert()
 
     //////////
     //DETAILS
