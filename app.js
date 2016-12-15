@@ -178,9 +178,7 @@ $(document).ready(function(e) {
   //////////      Donate
   /////
   $('#shelterDonate').on("click", function(e) {
-
    $("#donate").attr("src","https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&gclid=Cj0KEQiA6_TBBRDInaPjhcelt5oBEiQApPeTF59I-TNmSJZRbaSpIXxks6W9cN9FQwyr2CNmP4qoav0aAkvl8P8HAQ") 
- 
     $('#donateDiv').removeClass("hidden");
   });
 
