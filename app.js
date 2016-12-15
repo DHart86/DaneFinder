@@ -194,15 +194,15 @@ $(document).ready(function(e) {
     }
   });
 
-  $('*').on("load", function(e) {
+  /*$('*').on("load", function(e) {
     $("#workDammit").addClass("hidden");
-  });
+  }); */
 
    
   
-    /*$('#toys').on("click", function(e) {
+    $('#toys').on("click", function(e) {
     $('#workDammit').toggleClass('hidden');
-  });  */
+  }); 
   
   $('#groomLink').on("click", function(e) {
     $('#groomSection').toggleClass("hidden");
