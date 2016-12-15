@@ -195,9 +195,31 @@ $(document).ready(function(e) {
   });
    
   
-    $('#toys').on("click", function(e) {
-      $('.fuck').toggleClass("hidden");
-  }); 
+
+
+
+   /* $('#toys').on("click", function(e) {
+      $('#workDammit').toggleClass("hidden");
+  }); */
+
+
+
+
+$('#toys').click(function(e) {
+    if ($('#workDammit').hasClass('hidden')) {
+        $('#workDammit').removeClass('hidden');
+    } else {
+        $('#workDammit').addClass('hidden');
+    }
+});
+
+
+
+
+
+
+
+
   
   $('#groomLink').on("click", function(e) {
     $('#groomSection').toggleClass("hidden");
