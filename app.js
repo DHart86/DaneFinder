@@ -35,6 +35,8 @@ $(document).ready(function(e) {
     commonVars.city = petfinder.pets.pet.contact.city.$t;
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
+    commonVars.pic2 = "https" + commonVars.pic.slice(4); 
+    
 
     //////////
     //DETAILS
@@ -76,7 +78,7 @@ $(document).ready(function(e) {
     infoHTML += '<div id="information" class="hidden"></div>';
     infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
 
-    $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
+    $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic2 + '></a>' + infoHTML);
   }
 
   ///////   Next Button
@@ -85,7 +87,7 @@ $(document).ready(function(e) {
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
-        commonVars.zip = "&location=" + $('#zip').val();
+      commonVars.zip = "&location=" + $('#zip').val();
       commonVars.groomZip = $('#zip').val();
       $("#lmgtfy").prop('href', 'https://www.google.com/search?q=great+dane+training+' + $('#zip').val());
       $('#petfinderInfo').empty();
@@ -96,7 +98,7 @@ $(document).ready(function(e) {
   //////
   ////////////Swipe Right New Pet
 
-  $('.col-12').on("swiperight", function(e) {
+  /*$('.col-12').on("swiperight", function(e) {
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++
@@ -113,27 +115,22 @@ $(document).ready(function(e) {
   
   $('.col-12').on("swipeleft", function(e) {
     e.preventDefault();
-    if (commonVars.offSet !== 0) {
-    commonVars.offSet--;
-  };
+    commonVars.offSet--
       $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
     getter();
   });
   
-  
+  */
 
   /////////
   //PREV BUTTON
 
   $('#prevBtn').on("click", function(e) {
     e.preventDefault();
-    if (commonVars.offSet !== 0) {
     commonVars.offSet--;
-  };
-      $('#petfinderInfo').empty();
+    $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
-
     getter();
   });
 
@@ -165,7 +162,7 @@ $(document).ready(function(e) {
 
   $('#splashButton').on("click", function(e) {
     if ($('#zip').val().length == 5) {
-      $('#nextPet, #resources, .reset, iframe, #prevBtn, .swipeMessage').removeClass('hidden');
+      $('#nextPet, #resources, .reset, iframe, #prevBtn').removeClass('hidden');
     }
   });
 
@@ -178,8 +175,8 @@ $(document).ready(function(e) {
   /////
   $('#shelterDonate').on("click", function(e) {
 
-   $("#donate").attr("src","https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&gclid=Cj0KEQiA6_TBBRDInaPjhcelt5oBEiQApPeTF59I-TNmSJZRbaSpIXxks6W9cN9FQwyr2CNmP4qoav0aAkvl8P8HAQ") 
- 
+    $("#donate").attr("src", "https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&gclid=Cj0KEQiA6_TBBRDInaPjhcelt5oBEiQApPeTF59I-TNmSJZRbaSpIXxks6W9cN9FQwyr2CNmP4qoav0aAkvl8P8HAQ")
+
     $('#donateDiv').removeClass("hidden");
   });
 
@@ -197,14 +194,10 @@ $(document).ready(function(e) {
     $("#workDammit").addClass("hidden");
   });
 
-   //$('#toys').on("mouseenter", function(e) {
-    //$('#azon').attr("src", "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20");
-   //})
-  
   $('#toys').on("click", function(e) {
     $('#workDammit').toggleClass('hidden');
   });
-  
+
   $('#groomLink').on("click", function(e) {
     $('#groomSection').toggleClass("hidden");
   });
@@ -212,7 +205,6 @@ $(document).ready(function(e) {
   /////////GRooming 
   //////////////////////
   $('#groomLink').on("click", function(e) {
-    $('#groomSection').empty();
     $.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", function(response) {
       console.log(JSON.stringify(response, '', 2));
 
