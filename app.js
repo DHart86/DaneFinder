@@ -196,7 +196,7 @@ $(document).ready(function(e) {
    
   
     $('#toys').on("click", function(e) {
-      $('#workDammit').toggleClass("hidden");
+      $('.fuck').toggleClass("hidden");
   }); 
   
   $('#groomLink').on("click", function(e) {
