@@ -199,7 +199,7 @@ $(document).ready(function(e) {
    
   
     $('#toys').on("click", function(e) {
-    $('.azon').attr("src","//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20");
+
   }); 
   
   $('#groomLink').on("click", function(e) {
@@ -210,8 +210,31 @@ $(document).ready(function(e) {
   //////////////////////
   $('#groomLink').on("click", function(e) {
     $('#groomSection').empty();
-    $.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", function(response) {
-      console.log(JSON.stringify(response, '', 2));
+   
+
+
+
+
+ 
+    $.ajax({
+      type: 'GET',
+      async: true,
+      data: {},
+      url: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I" //'&callback=?',
+      dataType: 'jsonp',
+      success: function(response) {
+              console.log(JSON.stringify(response, '', 2));
+
+   
+  
+
+
+
+
+
+
+
+
 
       function link() {
         $.get("https://maps.googleapis.com/maps/api/place/details/json?placeid=" + commonVars.placeId + "&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", function(response2) {
@@ -242,5 +265,12 @@ $(document).ready(function(e) {
         }
       }
     });
-  });
+
+
+
+
+    },
+    });
+
+
 });
