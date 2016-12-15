@@ -114,7 +114,7 @@ $(document).ready(function(e) {
   
   $('.col-12').on("swipeleft", function(e) {
     e.preventDefault();
-    if (commonVars.offSet !== 0) {
+    if (commonVars.offSet > 0) {
     commonVars.offSet--;
   };
       $('#petfinderInfo').empty();
