@@ -222,7 +222,7 @@ $(document).ready(function(e) {
           commonVars.rated = response2.result.rating;
           commonVars.groomPhone = response2.result.formatted_phone_number;
           if (commonVars.website == null) {
-            $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="http://www.google.com/#q=' + commonVars.bizName + '"><h3>' + commonVars.bizName + '</h3></a><br>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + commonVars.rated + '</div>');
+            $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="http://www.google.com/#q=' + commonVars.bizName + '"><h4>' + commonVars.bizName + '</h4></a><br>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + commonVars.rated + '</div>');
             $('.cappy').css("text-transform", "capitalize");
           } else if (commonVars.website != null) {
             $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="' + commonVars.website + '"><h4>' + commonVars.bizName + '</h4></a>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + commonVars.rated + '</div>');
