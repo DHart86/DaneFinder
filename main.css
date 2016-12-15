@@ -130,7 +130,6 @@ h3 {
 }
 
 .petPic {
-  object-fit: none;
   object-position: center;
   border-radius: 25px;
   float: left;
