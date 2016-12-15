@@ -218,22 +218,12 @@ $(document).ready(function(e) {
  
     $.ajax({
       type: 'GET',
-      async: true,
       data: {},
-      url: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I" //'&callback=?',
-      dataType: 'jsonp',
+      url: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", //'&callback=?',
+      dataType: 'json',
+      crossDomain: true,
       success: function(response) {
               console.log(JSON.stringify(response, '', 2));
-
-   
-  
-
-
-
-
-
-
-
 
 
       function link() {
@@ -264,12 +254,12 @@ $(document).ready(function(e) {
           link();
         }
       }
-    });
+    }
 
 
+});
 
 
-    },
     });
 
 
