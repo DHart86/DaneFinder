@@ -202,6 +202,7 @@ $(document).ready(function(e) {
   
     $('#toys').on("click", function(e) {
     $('#workDammit').toggleClass('hidden');
+    $('#toys').attr("href","#workDammit");
   }); 
   
   $('#groomLink').on("click", function(e) {
