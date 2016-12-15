@@ -41,8 +41,6 @@ if (window.navigator.standalone) jQuery.ajaxSetup({isLocal:true});
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
 
-    commonVars.pic2 = "www." + commonVars.pic.substring(7)
-    alert(commonVars.pic2)
 
     //////////
     //DETAILS
@@ -84,7 +82,7 @@ if (window.navigator.standalone) jQuery.ajaxSetup({isLocal:true});
     infoHTML += '<div id="information" class="hidden"></div>';
     infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
 
-    $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic2 + '></a>' + infoHTML);
+    $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
   }
 
   ///////   Next Button
