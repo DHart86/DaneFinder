@@ -7,7 +7,7 @@ $(document).ready(function(e) {
   commonVars.radius = $('#zipRadius').val();
   commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
 
-  $('#workDammit').addClass("hidden");
+  
 
   $('.checker').on("click", function(e) {
     commonVars.option += $(this).val();
