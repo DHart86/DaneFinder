@@ -17,7 +17,7 @@ $(document).ready(function(e) {
       async: true,
       data: {},
       url: commonVars.url + commonVars.zip + '&offset=' + commonVars.offSet + commonVars.option + commonVars.radius + '&callback=?',
-      dataType: 'json',
+      dataType: 'jsonp',
       success: function(data) {
         addy(data);
       },
@@ -147,7 +147,7 @@ $(document).ready(function(e) {
       type: 'GET',
       data: {},
       url: commonVars.shelterLink + '&callback=?',
-      dataType: 'json',
+      dataType: 'jsonp',
       success: function(data) {
         var shelterFinder = data.petfinder;
         commonVars.shelterName = shelterFinder.shelter.name.$t;
@@ -208,7 +208,7 @@ $(document).ready(function(e) {
 
   /////////GRooming 
   //////////////////////
-  /*$('#groomLink').on("click", function(e) {
+  $('#groomLink').on("click", function(e) {
     $('#groomSection').empty();
     $.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", function(response) {
       console.log(JSON.stringify(response, '', 2));
@@ -242,5 +242,5 @@ $(document).ready(function(e) {
         }
       }
     });
-  });*/
+  });
 });
