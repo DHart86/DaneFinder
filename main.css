@@ -565,3 +565,11 @@ ul {
   text-align: center;
   box-shadow: 2px 2px 5px gray;
 }
+
+h4 {
+  margin-bottom: 4px;
+}
+
+.spacer {
+  height: 200px;
+}
