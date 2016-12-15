@@ -41,7 +41,7 @@ if (window.navigator.standalone) jQuery.ajaxSetup({isLocal:true});
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
 
-    commonVars.pic2 = "https://www." + commonVars.pic.substring(7)
+    commonVars.pic2 = "www." + commonVars.pic.substring(7)
     alert(commonVars.pic2)
 
     //////////
