@@ -572,3 +572,7 @@ h4 {
 .spacer {
   height: 200px;
 }
+
+#workDammit {
+  display: block;
+}
