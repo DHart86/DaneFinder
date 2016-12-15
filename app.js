@@ -198,13 +198,11 @@ $(document).ready(function(e) {
     $("#workDammit").addClass("hidden");
   });
 
-   //$('#toys').on("mouseenter", function(e) {
-    //$('#azon').attr("src", "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20");
-   //})
+   
   
-  $('#toys').on("click", function(e) {
+    /*$('#toys').on("click", function(e) {
     $('#workDammit').toggleClass('hidden');
-  });
+  });  */
   
   $('#groomLink').on("click", function(e) {
     $('#groomSection').toggleClass("hidden");
