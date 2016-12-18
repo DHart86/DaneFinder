@@ -545,7 +545,7 @@ label {
 
 #donateClose {
   position: relative;
-  color: #DB232A;
+  color: #F77A77;
   left: 85%;
   top: 10px;
   display: inline-block;
@@ -558,7 +558,7 @@ label {
   padding-bottom: 0px;
   transition: all .8s;
   transition-timing: ease-in-out;
-  text-shadow: -2px -2px 20px #E36D6F;
+  text-shadow: -2px -2px 10px black;
 }
 
 #donateClose:hover {
@@ -590,7 +590,7 @@ h4 {
   height: 35px;
   border-radius: 4px;
   color: white;
-  height: 39px;
+  height: 37px;
   font-size: 20px;
 }
 
