@@ -67,6 +67,7 @@ h3 {
 @media screen and (max-width:640px) {
   #splashButton {
     min-width: 100%;
+    word-break: break-all;
   }
   body {
     margin: 0px;
@@ -88,6 +89,12 @@ h3 {
   .petPic {
     width: 100%;
       }
+
+      .finder {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+}
 
 }
 
@@ -125,6 +132,10 @@ h3 {
 
 .swipeMessage {
   display: none;
+}
+
+.finder {
+  width: 50px;
 }
 
 }
@@ -581,8 +592,7 @@ h4 {
   border-radius: 4px;
   color: white;
   height: 39px;
-  width: 50px;
-  vertical-align: top
+  
 }
 
 .finder:hover {
