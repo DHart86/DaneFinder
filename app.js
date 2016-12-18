@@ -5,9 +5,7 @@ $(document).ready(function(e) {
   commonVars.option = '';
   commonVars.needs = "";
   commonVars.radius = $('#zipRadius').val();
-  commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=great%20dane&output=full';
-
-  
+  commonVars.url = 'https://api.petfinder.com/pet.find?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&animal=dog&breed=Great%20Dane&output=full';
 
   $('.checker').on("click", function(e) {
     commonVars.option += $(this).val();
@@ -37,7 +35,6 @@ $(document).ready(function(e) {
     commonVars.city = petfinder.pets.pet.contact.city.$t;
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
-
 
     //////////
     //DETAILS
@@ -88,9 +85,9 @@ $(document).ready(function(e) {
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
-        commonVars.zip = "&location=" + $('#zip').val();
+      commonVars.zip = "&location=" + $('#zip').val();
       commonVars.groomZip = $('#zip').val();
-      $("#lmgtfy").prop('href', 'https://www.google.com/search?q=great+dane+training+' + $('#zip').val());
+      $("#lmgtfy").prop('href', 'https://www.google.com/search?q=dog+training+' + $('#zip').val());
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
       getter();
@@ -113,18 +110,16 @@ $(document).ready(function(e) {
 
   /////
   /////////Swipe Left Last Pet
-  
+
   $('.col-12').on("swipeleft", function(e) {
     e.preventDefault();
     if (commonVars.offSet > 0) {
-    commonVars.offSet--;
-  };
-      $('#petfinderInfo').empty();
+      commonVars.offSet--;
+    };
+    $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
     getter();
   });
-  
-  
 
   /////////
   //PREV BUTTON
@@ -132,9 +127,9 @@ $(document).ready(function(e) {
   $('#prevBtn').on("click", function(e) {
     e.preventDefault();
     if (commonVars.offSet !== 0) {
-    commonVars.offSet--;
-  };
-      $('#petfinderInfo').empty();
+      commonVars.offSet--;
+    };
+    $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
 
     getter();
@@ -166,7 +161,7 @@ $(document).ready(function(e) {
     $('#information').empty().toggleClass('hidden').append('<div class="col-6"><div id="mapBorder"><div class="overlay"><iframe frameborder="0" id="map" src="https://maps.google.com/maps?output=embed&iwloc&z=10&mid=1rTY7Rf5tSCc5FOdtFeeiszRYcNc&&daddr=' + commonVars.lat + ',' + commonVars.long + '"></iframe></div></div></div><div class="col-6" id="needs"><p><strong>Name:</strong> ' + commonVars.name + '<br><strong>Shelter:</strong><a target="_blank" href="http://awos.petfinder.com/shelters/' + commonVars.shelterID + '.html">' + commonVars.shelterName + '</a><br><strong>Location</strong>: <a target=_blank href="https://www.google.com/maps/place/@' + commonVars.lat + ',' + commonVars.long + ',' + '13z/">' + commonVars.addy + '</a><br>' + commonVars.city + ', ' + commonVars.state + '<br><strong>E-mail: </strong><a href="mailto:' + commonVars.email + '">' + commonVars.email + '</a><br><strong>Phone: </strong> ' + '<a href="tel:+' + commonVars.phone + '">' + commonVars.phone + '</a>' + '<br>' + commonVars.needs + '</p></div><span id="spinny">X</span>');
   });
 
-  $('#splashButton').on("click", function(e) {
+  $('#splashButton, .finder').on("click", function(e) {
     if ($('#zip').val().length == 5) {
       $('#nextPet, #resources, .reset, iframe, #prevBtn, .swipeMessage').removeClass('hidden');
     }
@@ -180,7 +175,7 @@ $(document).ready(function(e) {
   //////////      Donate
   /////
   $('#shelterDonate').on("click", function(e) {
-   $("#donate").attr("src","https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&gclid=Cj0KEQiA6_TBBRDInaPjhcelt5oBEiQApPeTF59I-TNmSJZRbaSpIXxks6W9cN9FQwyr2CNmP4qoav0aAkvl8P8HAQ") 
+    $("#donate").attr("src", "https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&gclid=Cj0KEQiA6_TBBRDInaPjhcelt5oBEiQApPeTF59I-TNmSJZRbaSpIXxks6W9cN9FQwyr2CNmP4qoav0aAkvl8P8HAQ")
     $('#donateDiv').removeClass("hidden");
   });
 
@@ -193,93 +188,75 @@ $(document).ready(function(e) {
       $("#donateDiv").addClass("hidden");
     }
   });
-   
-  
 
+  $('#toys').on("click", function(e) {
+    $('#workDammit').toggleClass("hidden2");
+  });
 
-
-   /* $('#toys').on("click", function(e) {
-      $('#workDammit').toggleClass("hidden");
-  }); */
-
-
-
-
-$('#toys').click(function(e) {
-    if ($('#workDammit').hasClass('hidden')) {
-        $('#workDammit').removeClass('hidden');
-    } else {
-        $('#workDammit').addClass('hidden');
-    }
-});
-
-
-
-
-
-
-
-
-  
   $('#groomLink').on("click", function(e) {
     $('#groomSection').toggleClass("hidden");
   });
 
   /////////GRooming 
   //////////////////////
+
+  function loadScript(src, callback) {
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    if (callback) script.onload = callback;
+    document.getElementsByTagName("head")[0].appendChild(script);
+    script.src = src;
+  }
+
   $('#groomLink').on("click", function(e) {
     $('#groomSection').empty();
-   
-
-
-
-
- 
-    $.ajax({
-      type: 'GET',
-      data: {},
-      url: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + commonVars.groomZip + " dog grooming&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", //'&callback=?',
-      dataType: 'json',
-      crossDomain: true,
-      success: function(response) {
-              console.log(JSON.stringify(response, '', 2));
-
+    window.groomCall = function() {
+      var service = new google.maps.places.PlacesService($('.groom').get(0));
 
       function link() {
-        $.get("https://maps.googleapis.com/maps/api/place/details/json?placeid=" + commonVars.placeId + "&key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I", function(response2) {
-          commonVars.website = response2.result.website;
-          commonVars.bizName = response2.result.name;
-          commonVars.bizAddress = response2.result.vicinity;
-          commonVars.types = response2.result.types;
-          commonVars.rated = response2.result.rating;
-          commonVars.groomPhone = response2.result.formatted_phone_number;
+        service.getDetails({
+          placeId: commonVars.placeId
+        }, function(response2, status) {
+          //alert(JSON.stringify(response2, '', 2))
+          commonVars.website = response2.website;
+          commonVars.bizName = response2.name;
+          commonVars.bizAddress = response2.vicinity;
+          commonVars.types = response2.types;
+          commonVars.rated = response2.rating;
+          commonVars.groomPhone = response2.formatted_phone_number;
+
           if (commonVars.website == null) {
             $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="http://www.google.com/#q=' + commonVars.bizName + '"><h4>' + commonVars.bizName + '</h4></a><br>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + commonVars.rated + '</div>');
             $('.cappy').css("text-transform", "capitalize");
           } else if (commonVars.website != null) {
-            $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="' + commonVars.website + '"><h4>' + commonVars.bizName + '</h4></a>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + commonVars.rated + '</div>');
+            $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="' + commonVars.website + '"><h4>' + commonVars.bizName + '</h4></a>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + "Google Places rating: " + commonVars.rated + '</div>');
             $('.cappy').css("text-transform", "capitalize");
           }
         });
       }
 
-      var x = 0;
-      for (var i in response.results) {
-        commonVars.rating = response.results[x].rating;
-        commonVars.placeId = response.results[x].place_id;
-        x++;
+      service.textSearch({
+        query: commonVars.groomZip + "dog grooming"
+      }, function(response, status) {
+        console.log(JSON.stringify(response, '', 2))
+          // alert(JSON.stringify(response[0].place_id, '', 2))
 
-        if (typeof commonVars.rating == 'number') {
-          link();
+        var x = 0;
+        for (var i in response) {
+          // alert(response)
+          commonVars.rating = response[x].rating;
+          commonVars.placeId = response[x].place_id;
+          x++;
+          if (typeof commonVars.rating == 'number') {
+            link();
+          }
         }
-      }
+      })
     }
-
-
-});
-
-
-    });
-
-
-});
+    loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I&libraries=places&callback=groomCall',
+      function() {
+        log('google-loader has been loaded, but not the maps-API ');
+      });
+  })
+})

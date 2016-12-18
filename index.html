@@ -27,7 +27,7 @@
   <div class="col-12">
     <div class="splash">
       <form id="formID">
-        <input class="newPet" id="splashButton" type="button" value="Dane Finder"></input>
+        <button class="newPet" id="splashButton" type="submit">Dane Finder</button>
         <h4>Find Local, Rescuable Great Danes in your area!</h4>
         <div class="row" id="selectWrap">
           <section title=".squaredOne">
@@ -37,18 +37,20 @@
             </ul>
           </section>
         </div>
+
         Within <select name="selectDist" id="zipRadius" required>
   <option value="&distance=10">10 miles</option>
   <option value="&distance=25">25 miles</option>
   <option value="&distance=50">50 miles</option>
   </select> of
 
-        <input id="zip" maxlength="5" placeholder="ZIP code" type="number" required /><br>
-      </form>
+        <input id="zip" maxlength="5" placeholder="ZIP code" type="number" required/>
+        <button class="finder newPet">Find</button>
     </div>
+    </form>
   </div>
 
-  <div class="col-12" id="petfinderInfo">
+<div class="col-12" id="petfinderInfo">
     <div id="information" class="hidden">
       <div class="overlay" onClick="style.pointerEvents='none'"></div>
     </div>
@@ -90,20 +92,35 @@
   </div>
 </div>
 
-<div class="row hidden"  id="workDammit">
-  <div class="col-12">
-   <script class="azon" src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c1c87e39-4ef2-497e-b50e-604e35e1833c&storeId=dange00-20"></script>  
+<div class="groom row hidden" id="groomSection"></div>
+
+<div class="row">
+  <div class="col-12 hidden2" id="workDammit">
+    <script id="azon" type="text/javascript">
+      amzn_assoc_placement = "adunit0";
+      amzn_assoc_search_bar = "true";
+      amzn_assoc_tracking_id = "dange00-20";
+      amzn_assoc_ad_mode = "manual";
+      amzn_assoc_ad_type = "smart";
+      amzn_assoc_marketplace = "amazon";
+      amzn_assoc_region = "US";
+      amzn_assoc_title = "";
+      amzn_assoc_asins = "B018OENI8O,B01LY8JAME,B00DFX4XY8,B004ERY7KE";
+      amzn_assoc_linkid = "2b4efae977a0ef1b3132dfa03f2a8312";
+    </script>
+    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
   </div>
 </div>
 
-<div class="groom row hidden" id="groomSection"></div>
+<div id="service-helper"></div>
 
 <div id="donateDiv" class="hidden">
   <span id="donateClose">X</span>
   <iframe id="donate"></iframe>
 </div>
 
-<div class="spacer"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmJ0_YAaSOyxFKql5LFhoaAa9K2EXhX8I&libraries=places&callback=groomCall">
+</script>
 
 
     
