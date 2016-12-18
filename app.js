@@ -81,7 +81,7 @@ $(document).ready(function(e) {
 
   ///////   Next Button
   //////////
-  $('.newPet').on("click", function(e) {
+  $('.newPet, .finder').on("click", function(e) {
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
