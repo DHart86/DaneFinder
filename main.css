@@ -535,10 +535,8 @@ label {
 
 #donateDiv {
   position: absolute;
-  left: 50%;
   top: 20%;
-  margin-left: -37.5%;
-  width: 80%;
+  width: 100%;
   background-color: white;
   z-index: 4;
   box-shadow: 2px 2px 20px gray
