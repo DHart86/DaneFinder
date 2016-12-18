@@ -136,6 +136,7 @@ h3 {
 
 .finder {
   width: 50px;
+  text-align: bottom;
 }
 
 }
@@ -590,7 +591,6 @@ h4 {
   border-radius: 4px;
   color: white;
   height: 39px;
-  
 }
 
 .finder:hover {
