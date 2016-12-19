@@ -11,10 +11,10 @@ $(document).ready(function(e) {
     commonVars.option += $(this).val();
   });
 
-alert("first alert")
+//alert("first alert")
 
   function getter() {
-alert("initializing getter")
+//alert("initializing getter")
 
     $.ajax({
       type: 'GET',
@@ -27,12 +27,12 @@ alert("initializing getter")
       },
     });
 
-    alert(commonVars.name)
+    //alert(commonVars.name)
   }
 
   function addy(b) {
     var petfinder = b.petfinder;
-alert("adding shit")
+//alert("adding shit")
     commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
     commonVars.id = petfinder.pets.pet.id.$t;
     commonVars.name = petfinder.pets.pet.name.$t;
@@ -83,14 +83,14 @@ alert("adding shit")
     infoHTML += '<br>';
     infoHTML += '<div id="information" class="hidden"></div>';
     infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
-alert("this is the one in infoHTML")
+//alert("this is the one in infoHTML")
     $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
   }
 
   ///////   Next Button
   //////////
   $('.newPet, .finder').on("click", function(e) {
-    alert("first button working")
+    //alert("first button working")
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
@@ -101,8 +101,8 @@ alert("this is the one in infoHTML")
       $('.splash').addClass('hidden');
       getter();
 
-        alert(commonVars.name)
-      alert("name should have popped up")
+        //alert(commonVars.name)
+      //alert("name should have popped up")
     }
   });
   //////
@@ -152,7 +152,7 @@ alert("this is the one in infoHTML")
   ////INFO CALL
   $('#petfinderInfo').on("mouseenter touchstart", "#info", function(e) {
 
-    alert("info call working")
+    //alert("info call working")
     commonVars.shelterLink = 'https://api.petfinder.com/shelter.get?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&id=' + commonVars.shelterID + '&output=full';
     $('.splash').addClass('hidden');
     $.ajax({
@@ -166,8 +166,8 @@ alert("this is the one in infoHTML")
         commonVars.long = shelterFinder.shelter.longitude.$t;
         commonVars.lat = shelterFinder.shelter.latitude.$t;
         commonVars.addy = shelterFinder.shelter.address1.$t;
-        alert(commonVars.long)
-        alert("long should have popped up")
+        //alert(commonVars.long)
+        //alert("long should have popped up")
       }
     });
   });
