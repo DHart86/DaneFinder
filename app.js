@@ -83,7 +83,7 @@ alert("adding shit")
     infoHTML += '<br>';
     infoHTML += '<div id="information" class="hidden"></div>';
     infoHTML += '<button id="info">Learn More About Me</button><a href="mailto:' + commonVars.email + '?subject=Adopting%20' + commonVars.name + '&body=Body%20goes%20here"><button id="adopt">Take Me Home!</button></a></ul>';
-
+alert("this is the one in infoHTML")
     $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
   }
 
