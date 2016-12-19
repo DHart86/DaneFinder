@@ -114,6 +114,8 @@ alert("adding shit")
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
       getter();
+      alert(commonVars.name)
+      alert("name should have popped up")
     };
   });
 
@@ -162,6 +164,8 @@ alert("adding shit")
         commonVars.long = shelterFinder.shelter.longitude.$t;
         commonVars.lat = shelterFinder.shelter.latitude.$t;
         commonVars.addy = shelterFinder.shelter.address1.$t;
+        alert(commonVars.long)
+        alert("long should have popped up")
       }
     });
   });
