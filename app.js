@@ -26,6 +26,8 @@ alert("initializing getter")
         addy(data);
       },
     });
+
+    alert(commonVars.name)
   }
 
   function addy(b) {
@@ -71,7 +73,7 @@ alert("adding shit")
       commonVars.firstName = words;
     }
 
-alert(commonVars.name)
+
 
     var infoHTML = '';
     infoHTML += '<h3>Hi! My name is ' + commonVars.firstName + '!</h3>';
