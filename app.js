@@ -71,6 +71,8 @@ alert("adding shit")
       commonVars.firstName = words;
     }
 
+alert("commonVars.name")
+
     var infoHTML = '';
     infoHTML += '<h3>Hi! My name is ' + commonVars.firstName + '!</h3>';
     infoHTML += '<br>';
