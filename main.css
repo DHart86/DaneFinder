@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 h3 {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 30px;
@@ -47,6 +48,10 @@ h3 {
   content: '';
 }
 
+ #donateClose {
+    left: 75%;
+  }
+
 .row {
   padding-left: 10px;
   padding-right: 10px;
@@ -66,15 +71,25 @@ h3 {
 
 @media screen and (max-width:640px) {
   #splashButton {
+    position: absolute;
     min-width: 100%;
-    word-break: break-all;
+    padding: 30px;
+    top: 0;
+    left:0; 
+    height: 250px;
+    border-radius: 0px 0px 24px 24px;
   }
+  
+  form {
+    margin-top: 250px;
+  }
+  
   body {
     margin: 0px;
   }
   select {
     width: 100%;
-    padding-left: 33%;
+    padding-left: 41%;
   }
   #zip {
     width: 100%;
@@ -85,17 +100,11 @@ h3 {
   #prevBtn {
     display: none;
   }
-
-  .petPic {
-    width: 100%;
-      }
-
-      .finder {
-    width: 100%;
+  
+  .finder {
     margin-top: 10px;
-    font-size: 20px;
-}
-
+    width: 100%;
+  }
 }
 
 @media screen and (min-width:640px) {
@@ -111,7 +120,10 @@ h3 {
   }
   #splashButton {
     min-width: 500px;
-    margin-top: 50px;
+    margin-top: 20px;
+    padding: 50px;
+    height: 200px;
+    border-radius: 24px;
   }
   .petPic {
     min-width: 450px;
@@ -123,29 +135,30 @@ h3 {
   body {
     padding-top: 20px;
   }
-  #splashButton {
-    margin-top: 20px;
-  }
+  
   .reset {
     box-shadow: 2px 2px 5px gray;
   }
-
-.swipeMessage {
-  display: none;
-}
-
-.finder {
-  width: 50px;
-  text-align: bottom;
-}
-
+  
+  .finder {
+    width: 50px;
+  }
+  
+  #donateClose {
+    left: 90%;
+  }
+  
 }
 
 .petPic {
+  object-fit: none;
   object-position: center;
   border-radius: 25px;
   float: left;
   margin-right: 10px;
+  width: auto;
+  max-height: 450px;
+  max-width: 100%;
   border: 2px solid black;
   height: auto;
   transition: all .8s ease-in-out;
@@ -356,11 +369,9 @@ p {
   margin-right: auto;
   margin-left: auto;
   display: block;
-  height: 200px;
-  font-size: 76px;
+  font-size: 80px;
   font-family: 'Bubblegum Sans', cursive;
   background-color: #6FC7C3;
-  border-radius: 24px;
   color: white;
   border: 6px double white;
   text-shadow: 2px 2px 6px black;
@@ -390,6 +401,7 @@ form {
 #zip {
   margin: 0px;
   text-align: center;
+  height: 39px;
 }
 
 input::-webkit-outer-spin-button,
@@ -546,10 +558,9 @@ label {
 #donateClose {
   position: relative;
   color: #F77A77;
-  left: 85%;
   top: 10px;
   display: inline-block;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   border-radius: 50px;
   width: 80px;
@@ -558,7 +569,8 @@ label {
   padding-bottom: 0px;
   transition: all .8s;
   transition-timing: ease-in-out;
-  text-shadow: -2px -2px 10px black;
+  text-shadow: 0px 0px 10px black;
+  font-family: 'Audiowide', cursive;
 }
 
 #donateClose:hover {
@@ -590,10 +602,18 @@ h4 {
   height: 35px;
   border-radius: 4px;
   color: white;
-  height: 37px;
+  height: 39px;
+  vertical-align: top;
   font-size: 20px;
 }
 
 .finder:hover {
   box-shadow: 0px 0px 5px #E36D6F;
 }
+
+
+/* Try view size?? 
+crossDomain: true
+
+
+*/

@@ -163,7 +163,7 @@ $(document).ready(function(e) {
 
   $('#splashButton, .finder').on("click", function(e) {
     if ($('#zip').val().length == 5) {
-      $('#nextPet, #resources, .reset, iframe, #prevBtn, .swipeMessage').removeClass('hidden');
+      $('#nextPet, #resources, .reset, iframe, #prevBtn, .swipeMessage, .row').removeClass('hidden');
     }
   });
 
@@ -171,7 +171,7 @@ $(document).ready(function(e) {
     $('.splash').removeClass('hidden');
     $('#zip').val() === 0;
   });
-
+  
   //////////      Donate
   /////
   $('#shelterDonate').on("click", function(e) {
@@ -189,12 +189,12 @@ $(document).ready(function(e) {
     }
   });
 
-  $('#toys').on("click", function(e) {
+  $('#toys, .azonClose').on("click", function(e) {
     $('#workDammit').toggleClass("hidden2");
   });
 
-  $('#groomLink').on("click", function(e) {
-    $('#groomSection').toggleClass("hidden");
+  $('#groomLink, .groomClose').on("click", function(e) {
+    $('#groomSection, .groomCloseWrap').toggleClass("hidden");
   });
 
   /////////GRooming 
@@ -250,6 +250,8 @@ $(document).ready(function(e) {
           x++;
           if (typeof commonVars.rating == 'number') {
             link();
+            
+           
           }
         }
       })
