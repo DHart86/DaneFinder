@@ -53,7 +53,7 @@ h3 {
   }
 
   .swipeMessage {
-    display: block;
+    display: none;
   }
 
 .row {
@@ -97,7 +97,7 @@ h3 {
   }
 
   .swipeMessage {
-    display: none;
+    display: block;
   }
 
   #zip {
