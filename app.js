@@ -100,6 +100,9 @@ alert("this is the one in infoHTML")
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
       getter();
+
+        alert(commonVars.name)
+      alert("name should have popped up")
     }
   });
   //////
@@ -114,8 +117,7 @@ alert("this is the one in infoHTML")
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
       getter();
-      alert(commonVars.name)
-      alert("name should have popped up")
+    
     };
   });
 
