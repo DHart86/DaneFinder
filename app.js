@@ -11,7 +11,11 @@ $(document).ready(function(e) {
     commonVars.option += $(this).val();
   });
 
+alert("first alert")
+
   function getter() {
+alert("initializing getter")
+
     $.ajax({
       type: 'GET',
       async: true,
@@ -26,7 +30,7 @@ $(document).ready(function(e) {
 
   function addy(b) {
     var petfinder = b.petfinder;
-
+alert("adding shit")
     commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
     commonVars.id = petfinder.pets.pet.id.$t;
     commonVars.name = petfinder.pets.pet.name.$t;
@@ -82,6 +86,7 @@ $(document).ready(function(e) {
   ///////   Next Button
   //////////
   $('.newPet, .finder').on("click", function(e) {
+    alert("first button working")
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
@@ -138,6 +143,8 @@ $(document).ready(function(e) {
   /////////
   ////INFO CALL
   $('#petfinderInfo').on("mouseenter touchstart", "#info", function(e) {
+
+    alert("info call working")
     commonVars.shelterLink = 'https://api.petfinder.com/shelter.get?format=json&key=078fb1d0bd3aa6e9dba1f991d5972ae7&count=1&id=' + commonVars.shelterID + '&output=full';
     $('.splash').addClass('hidden');
     $.ajax({
