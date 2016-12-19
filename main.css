@@ -52,6 +52,10 @@ h3 {
     left: 75%;
   }
 
+  .swipeMessage {
+    display: block;
+  }
+
 .row {
   padding-left: 10px;
   padding-right: 10px;
@@ -91,6 +95,11 @@ h3 {
     width: 100%;
     padding-left: 41%;
   }
+
+  .swipeMessage {
+    display: none;
+  }
+
   #zip {
     width: 100%;
   }
