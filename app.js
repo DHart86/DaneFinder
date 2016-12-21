@@ -26,7 +26,7 @@ $(document).ready(function(e) {
     });
   }
 
- /* function addy(b) {
+  function addy(b) {
     var petfinder = b.petfinder;
 
     commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
@@ -37,6 +37,8 @@ $(document).ready(function(e) {
     commonVars.city = petfinder.pets.pet.contact.city.$t;
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
+
+alert("made it to this alert");
 
     //////////
     //DETAILS
@@ -60,6 +62,8 @@ $(document).ready(function(e) {
       if (Object.values(petfinder.pets.pet.options.option[z]) == "specialNeeds") {
         commonVars.needs += "<br>I've got some special needs &#x2714";
       }
+
+      alert("going through options");
     }
     ///////////////// 
     ////////////////
@@ -82,7 +86,7 @@ $(document).ready(function(e) {
   }
   
   
-  */
+  
 
   ///////   Next Button
   //////////
