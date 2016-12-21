@@ -19,19 +19,14 @@ $(document).ready(function(e) {
       url: commonVars.url + commonVars.zip + '&offset=' + commonVars.offSet + commonVars.option + commonVars.radius + '&callback=?',
       dataType: 'jsonp',
       success: function(data) {
-        
-        alert(JSON.stringify(data, '',2))
+        //alert(JSON.stringify(data, '',2))
         addy(data);
       },
     });
   }
 
   function addy(b) {
-
-alert("addy before other shit")
-
     var petfinder = b.petfinder;
-
     commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
     commonVars.id = petfinder.pets.pet.id.$t;
     commonVars.name = petfinder.pets.pet.name.$t;
@@ -40,8 +35,6 @@ alert("addy before other shit")
     commonVars.city = petfinder.pets.pet.contact.city.$t;
     commonVars.state = petfinder.pets.pet.contact.state.$t;
     commonVars.shelterID = petfinder.pets.pet.shelterId.$t;
-
-alert("made it to this alert");
 
     //////////
     //DETAILS
@@ -74,8 +67,6 @@ alert("made it to this alert");
     */
     ///////////////// 
     ////////////////
-
-alert("post options")
 
     var str1 = commonVars.name;
     for (var i in str1) {
@@ -111,7 +102,6 @@ alert("post options")
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
       
-
       getter();
     }
   });
