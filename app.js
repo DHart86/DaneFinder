@@ -118,7 +118,7 @@ $(document).ready(function(e) {
 
   /////
   /////////Swipe Left Last Pet
-/*
+
   $('.col-12').on("swipeleft", function(e) {
     e.preventDefault();
     if (commonVars.offSet > 0) {
@@ -143,7 +143,7 @@ $(document).ready(function(e) {
   });
   
   
-  */
+  
 
   /////////
   ////INFO CALL
