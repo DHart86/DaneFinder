@@ -194,7 +194,7 @@ $(document).ready(function(e) {
   });
 
   $('#donateClose').on("click", function(e) {
-    $('#donateDiv').addClass("hidden");
+    $('#donateDiv').toggleClass("hidden");
   });
 
   $(document).click(function(e) {

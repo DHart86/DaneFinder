@@ -138,6 +138,11 @@ h3 {
     min-width: 450px;
     max-width: 100%;
   }
+
+  .petPic:hover {
+  transform: scale(1.1);
+}
+
   section {
     text-align: center;
   }
@@ -171,10 +176,6 @@ h3 {
   border: 2px solid black;
   height: auto;
   transition: all .8s ease-in-out;
-}
-
-.petPic:hover {
-  transform: scale(1.1);
 }
 
 input {
