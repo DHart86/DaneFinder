@@ -21,7 +21,7 @@ $(document).ready(function(e) {
       success: function(data) {
         
         alert(JSON.stringify(data, '',2))
-       // addy(data);
+        addy(data);
       },
     });
   }
