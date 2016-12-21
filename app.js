@@ -97,9 +97,9 @@ $(document).ready(function(e) {
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
       
-  
+
       getter();
-   }
+    }
   });
   //////
   ////////////Swipe Right New Pet
