@@ -46,6 +46,8 @@ alert("made it to this alert");
     //////////
     //DETAILS
     //////////
+
+    /*
     for (var z in petfinder.pets.pet.options.option) {
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
         commonVars.needs = "I have my shots! &#x2714";
@@ -68,8 +70,13 @@ alert("made it to this alert");
 
       alert("going through options");
     }
+
+    */
     ///////////////// 
     ////////////////
+
+alert("post options")
+
     var str1 = commonVars.name;
     for (var i in str1) {
       var words = str1.split("-")[0];
