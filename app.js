@@ -87,7 +87,7 @@ $(document).ready(function(e) {
   ///////   Next Button
   //////////
   $('.newPet, .finder').on("click", function(e) {
-    /*
+    
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
@@ -96,7 +96,7 @@ $(document).ready(function(e) {
       $("#lmgtfy").prop('href', 'https://www.google.com/search?q=dog+training+' + $('#zip').val());
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
-      */
+      
   
       getter();
    // }
