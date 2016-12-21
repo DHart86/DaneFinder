@@ -27,6 +27,9 @@ $(document).ready(function(e) {
   }
 
   function addy(b) {
+
+alert("addy before other shit")
+
     var petfinder = b.petfinder;
 
     commonVars.pic = petfinder.pets.pet.media.photos.photo[2].$t;
