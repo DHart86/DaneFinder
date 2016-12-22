@@ -42,6 +42,8 @@ $(document).ready(function(e) {
 
      alert(JSON.stringify(petfinder.pets.pet.options.option))
     for (var z in petfinder.pets.pet.options.option) {
+alert("count")
+
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
         commonVars.needs = "I have my shots!";
       }
