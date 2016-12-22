@@ -45,9 +45,11 @@ $(document).ready(function(e) {
 alert("count")
 
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
+        alert("has shots")
         commonVars.needs = "I have my shots!";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "housetrained") {
+        alert("trained?")
         commonVars.needs += "<br>I'm housetrained!";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "altered") {
