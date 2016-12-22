@@ -42,7 +42,7 @@ $(document).ready(function(e) {
 
      alert(JSON.stringify(petfinder.pets.pet.options.option))
     for (var z in petfinder.pets.pet.options.option) {
-alert("count")
+alert(petfinder.pets.pet.options.option[z])
 
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
         alert("has shots")
