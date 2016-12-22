@@ -48,13 +48,13 @@ h3 {
   content: '';
 }
 
- #donateClose {
-    left: 75%;
-  }
+.close {
+  left: 75%;
+}
 
-  .swipeMessage {
-    display: none;
-  }
+.swipeMessage {
+  display: none;
+}
 
 .row {
   padding-left: 10px;
@@ -79,9 +79,27 @@ h3 {
     min-width: 100%;
     padding: 30px;
     top: 0;
-    left:0; 
+    left: 0;
     height: 250px;
     border-radius: 0px 0px 24px 24px;
+  }
+  
+  li {
+    width: 100%;
+  }
+  
+  #lab1 {
+    position: absolute;
+    left: 50px;
+  }
+  
+  #lab2 {
+    position: absolute;
+    right: 50px;
+  }
+  
+  .petPic {
+    width: 100%;
   }
   
   form {
@@ -91,21 +109,24 @@ h3 {
   body {
     margin: 0px;
   }
+  
   select {
     width: 100%;
     padding-left: 41%;
   }
-
+  
   .swipeMessage {
     display: block;
   }
-
+  
   #zip {
     width: 100%;
   }
+  
   #nextPet {
     display: none;
   }
+  
   #prevBtn {
     display: none;
   }
@@ -137,40 +158,34 @@ h3 {
   .petPic {
     min-width: 450px;
     max-width: 100%;
+    object-fit: none;
+    width: auto;
   }
-
   .petPic:hover {
-  transform: scale(1.1);
-}
-
+    transform: scale(1.1);
+  }
   section {
     text-align: center;
   }
   body {
     padding-top: 20px;
   }
-  
   .reset {
     box-shadow: 2px 2px 5px gray;
   }
-  
   .finder {
     width: 50px;
   }
-  
-  #donateClose {
+  .close {
     left: 90%;
   }
-  
 }
 
 .petPic {
-  object-fit: none;
   object-position: center;
   border-radius: 25px;
   float: left;
   margin-right: 10px;
-  width: auto;
   max-height: 450px;
   max-width: 100%;
   border: 2px solid black;
@@ -468,16 +483,18 @@ input,
 select {
   background-color: white;
   margin-bottom: 4px;
-  color: #FF8D88;
+  color: #E36468;
 }
 
 #zip,
-select, #zipRadius {
+select,
+#zipRadius {
   border: 2px solid #6FC7C3;
   font-size: 17px;
   border-radius: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+  outline:none;
 }
 
 #zip:focus {
@@ -565,30 +582,32 @@ label {
   box-shadow: 2px 2px 20px gray
 }
 
-#donateClose {
+.close {
   position: relative;
   color: #F77A77;
   top: 10px;
   display: inline-block;
   font-size: 50px;
   font-weight: bold;
-  border-radius: 50px;
+  text-decoration: none;
   width: 80px;
   text-align: center;
-  padding-top: 0px;
-  padding-bottom: 0px;
   transition: all .8s;
   transition-timing: ease-in-out;
   text-shadow: 0px 0px 10px black;
+}
+
+.close span {
   font-family: 'Audiowide', cursive;
 }
 
-#donateClose:hover {
+.close:hover {
   transform: rotate(720deg);
 }
 
 ul {
   font-size: 19px;
+  padding-left: 0px;
 }
 
 .swipeMessage {
@@ -621,9 +640,3 @@ h4 {
   box-shadow: 0px 0px 5px #E36D6F;
 }
 
-
-/* Try view size?? 
-crossDomain: true
-
-
-*/

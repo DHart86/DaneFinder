@@ -37,15 +37,11 @@
         <div class="row" id="selectWrap">
           <section title=".squaredOne">
             <ul>
-              <li><label for="maleCheck"><input type="checkbox" name="options" id="maleCheck" class="checker" value="&sex=M">Male</input></label><label for="femaleCheck"><input type="checkbox" name="options" id="femaleCheck" class="checker" value="&sex=F">Female</input></label></li>
-              <li><label for="youngCheck"><input type="checkbox" name="options" id="youngCheck" class="checker" id="youngCheck" value="&age=baby&age=young">Young</input></label><label for="matureCheck"><input type="checkbox" name="options" id="matureCheck" class="checker" value="&age=adult&age=senior">Mature</input></label></li>
+              <li><label for="maleCheck" id="lab1"><input type="checkbox" name="options" id="maleCheck" class="checker" value="&sex=M">Male</input></label><label for="femaleCheck" id="lab2"><input type="checkbox" name="options" id="femaleCheck" class="checker" value="&sex=F">Female</input></label></li>
+              <li><label for="youngCheck" id="lab1"><input type="checkbox" name="options" id="youngCheck" class="checker" id="youngCheck" value="&age=baby&age=young">Young</input></label><label for="matureCheck" id="lab2"><input type="checkbox" name="options" id="matureCheck" class="checker" value="&age=adult&age=senior">Mature</input></label></li>
             </ul>
           </section>
         </div>
-
-
-
-
 
         Within <select name="selectDist" id="zipRadius" required>
   <option value="&distance=10">10 miles</option>
@@ -59,21 +55,20 @@
     </form>
   </div>
 
-<div class="col-12" id="petfinderInfo">
-    <div id="information" class="hidden">  
+  <div class="col-12" id="petfinderInfo">
+    <div id="information" class="hidden">
       <div class="overlay" onClick="style.pointerEvents='none'"></div>
     </div>
   </div>
 </div>
-
 
 <div class="row hidden" id="resources">
   <div class="col-3">
     <div id="amItem">
       <a id="lmgtfy" target="_blank" href='http://www.google.com/'>
         <h4>Find Local Training</h4>
-        	<img id="resourceImg" src="parking-1421907_1280.png">
-        </a>                 
+        <img id="resourceImg" src="parking-1421907_1280.png">
+      </a>
     </div>
   </div>
   <div class="col-3">
@@ -102,14 +97,14 @@
   </div>
 </div>
 <div class="row">
-<div class="groomCloseWrap hidden" id="groomJump"><a class="groomClose" href="#resources"><span id="donateClose">X</span></a></div>
-<div class="groom hidden" id="groomSection">
-       </div>
+  <div class="groomCloseWrap hidden" id="groomJump"><a class="close" href="#resources"><span id="groomClose">X</span></a></div>
+  <div class="groom hidden" id="groomSection">
+  </div>
 </div>
 <div class="row">
   <div class="col-12 hidden2" id="workDammit">
-                                             
-  <a class="azonClose" href="#resources"><span id="donateClose">X</span></a>
+
+    <a class="close" href="#resources"><span id="azonClose">X</span></a>
     <script id="azon" type="text/javascript">
       amzn_assoc_placement = "adunit0";
       amzn_assoc_search_bar = "true";
@@ -127,7 +122,7 @@
 </div>
 
 <div id="donateDiv" class="hidden">
-  <span id="donateClose">X</span>
+  <a class="close" href="#resources"> <span id="donateClose">X</span></a>
   <iframe id="donate"></iframe>
 </div>
 

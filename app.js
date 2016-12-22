@@ -40,31 +40,31 @@ $(document).ready(function(e) {
     //DETAILS
     //////////
 
-    /*
+    
     for (var z in petfinder.pets.pet.options.option) {
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
-        commonVars.needs = "I have my shots! &#x2714";
+        commonVars.needs = "I have my shots!";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "housetrained") {
-        commonVars.needs += "<br>I'm housetrained! &#x2714";
+        commonVars.needs += "<br>I'm housetrained!";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "altered") {
-        commonVars.needs += "<br>I'm already spayed/neutered &#x2714";
+        commonVars.needs += "<br>I'm already spayed/neutered";
+      }
+      if (Object.values(petfinder.pets.pet.options.option[z]) == "noKids") {
+        commonVars.needs += "<br>I'm not too good around children!";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "noDogs") {
-        commonVars.needs += "<br>I like to be the only dog in the house &#x2714";
+        commonVars.needs += "<br>I like to be the only dog in the house";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "noCats") {
-        commonVars.needs += "<br>Grrr I don't like cats! &#x2714";
+        commonVars.needs += "<br>Grrr I don't like cats!";
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "specialNeeds") {
-        commonVars.needs += "<br>I've got some special needs &#x2714";
+        commonVars.needs += "<br>I've got some special needs";
       }
-
-      alert("going through options");
     }
-
-    */
+    
     ///////////////// 
     ////////////////
 
@@ -85,14 +85,11 @@ $(document).ready(function(e) {
 
     $('#petfinderInfo').append('<a target="_blank" href="https://www.petfinder.com/petdetail/' + commonVars.id + '"><img class="petPic" src=' + commonVars.pic + '></a>' + infoHTML);
   }
-  
-  
-  
 
   ///////   Next Button
   //////////
   $('.newPet, .finder').on("click", function(e) {
-    
+
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++;
@@ -101,7 +98,7 @@ $(document).ready(function(e) {
       $("#lmgtfy").prop('href', 'https://www.google.com/search?q=dog+training+' + $('#zip').val());
       $('#petfinderInfo').empty();
       $('.splash').addClass('hidden');
-      
+
       getter();
     }
   });
@@ -142,13 +139,8 @@ $(document).ready(function(e) {
     };
     $('#petfinderInfo').empty();
     $('.splash').addClass('hidden');
-
     getter();
   });
-  
-  
-  
-
   /////////
   ////INFO CALL
   $('#petfinderInfo').on("mouseenter touchstart", "#info", function(e) {
@@ -185,7 +177,7 @@ $(document).ready(function(e) {
     $('.splash').removeClass('hidden');
     $('#zip').val() === 0;
   });
-  
+
   //////////      Donate
   /////
   $('#shelterDonate').on("click", function(e) {
@@ -203,11 +195,11 @@ $(document).ready(function(e) {
     }
   });
 
-  $('#toys, .azonClose').on("click", function(e) {
+  $('#toys, #azonClose').on("click", function(e) {
     $('#workDammit').toggleClass("hidden2");
   });
 
-  $('#groomLink, .groomClose').on("click", function(e) {
+  $('#groomLink, #groomClose').on("click", function(e) {
     $('#groomSection, .groomCloseWrap').toggleClass("hidden");
   });
 
@@ -264,8 +256,6 @@ $(document).ready(function(e) {
           x++;
           if (typeof commonVars.rating == 'number') {
             link();
-            
-           
           }
         }
       })
