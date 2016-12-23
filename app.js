@@ -47,7 +47,7 @@ alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
 
 
 
-      if (petfinder.pets.pet.options.option[z] == '{"$t":"hasShots"}') {
+      if (petfinder.pets.pet.options.option[z] == {"$t":"hasShots"}) {
         alert("has shots")
         commonVars.needs = "I have my shots!"
       }
