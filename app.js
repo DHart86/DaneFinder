@@ -40,34 +40,32 @@ $(document).ready(function(e) {
     //DETAILS
     //////////
 
-     alert(JSON.stringify(petfinder.pets.pet.options.option))
+    
+    //alert(JSON.stringify(petfinder.pets.pet.options.option))
     for (var z in petfinder.pets.pet.options.option) {
-alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
-alert("2 " + petfinder.pets.pet.options.option[z][0])
-alert("3 " + petfinder.pets.pet.options.option[z][1])
-
+//alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
-        alert("has shots")
-        commonVars.needs = "I have my shots!";
+       // alert("has shots")
+        commonVars.needs = "I have my shots!"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "housetrained") {
-        alert("trained?")
-        commonVars.needs += "<br>I'm housetrained!";
+      //  alert("trained?")
+        commonVars.needs += "<br>I'm housetrained!"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "altered") {
-        commonVars.needs += "<br>I'm already spayed/neutered";
+        commonVars.needs += "<br>I'm already spayed/neutered"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "noKids") {
-        commonVars.needs += "<br>I'm not too good around children!";
+        commonVars.needs += "<br>I'm not too good around children!"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "noDogs") {
-        commonVars.needs += "<br>I like to be the only dog in the house";
+        commonVars.needs += "<br>I like to be the only dog in the house"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "noCats") {
-        commonVars.needs += "<br>Grrr I don't like cats!";
+        commonVars.needs += "<br>Grrr I don't like cats!"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "specialNeeds") {
-        commonVars.needs += "<br>I've got some special needs";
+        commonVars.needs += "<br>I've got some special needs"
       }
     }
     
@@ -94,7 +92,7 @@ alert("3 " + petfinder.pets.pet.options.option[z][1])
 
   ///////   Next Button
   //////////
-  $('.newPet, .finder').on("click", function(e) {
+  $('#nextPet, .finder').on("click", function(e) {
 
     if ($('#zip').val().length == 5) {
       e.preventDefault();
@@ -173,7 +171,7 @@ alert("3 " + petfinder.pets.pet.options.option[z][1])
     $('#information').empty().toggleClass('hidden').append('<div class="col-6"><div id="mapBorder"><div class="overlay"><iframe frameborder="0" id="map" src="https://maps.google.com/maps?output=embed&iwloc&z=10&mid=1rTY7Rf5tSCc5FOdtFeeiszRYcNc&&daddr=' + commonVars.lat + ',' + commonVars.long + '"></iframe></div></div></div><div class="col-6" id="needs"><p><strong>Name:</strong> ' + commonVars.name + '<br><strong>Shelter:</strong><a target="_blank" href="http://awos.petfinder.com/shelters/' + commonVars.shelterID + '.html">' + commonVars.shelterName + '</a><br><strong>Location</strong>: <a target=_blank href="https://www.google.com/maps/place/@' + commonVars.lat + ',' + commonVars.long + ',' + '13z/">' + commonVars.addy + '</a><br>' + commonVars.city + ', ' + commonVars.state + '<br><strong>E-mail: </strong><a href="mailto:' + commonVars.email + '">' + commonVars.email + '</a><br><strong>Phone: </strong> ' + '<a href="tel:+' + commonVars.phone + '">' + commonVars.phone + '</a>' + '<br>' + commonVars.needs + '</p></div><span id="spinny">X</span>');
   });
 
-  $('#splashButton, .finder').on("click", function(e) {
+  $('.finder').on("click", function(e) {
     if ($('#zip').val().length == 5) {
       $('#nextPet, #resources, .reset, iframe, #prevBtn, .swipeMessage, .row').removeClass('hidden');
     }
@@ -186,8 +184,13 @@ alert("3 " + petfinder.pets.pet.options.option[z][1])
 
   //////////      Donate
   /////
-  $('#shelterDonate').on("click", function(e) {
+  
+  $(window).on('load', function(e){
     $("#donate").attr("src", "https://secure.aspca.org/donate/ps-gn-p2?ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&ms=MP_PMK_Googlenonbrand-T4&initialms=MP_PMK_Googlenonbrand-T4&pcode=WPSE9XXGOGN2PK00024&lpcode=WPSE9XXGOGN1PK00024&gclid=Cj0KEQiA6_TBBRDInaPjhcelt5oBEiQApPeTF59I-TNmSJZRbaSpIXxks6W9cN9FQwyr2CNmP4qoav0aAkvl8P8HAQ")
+  });
+  
+  
+  $('#shelterDonate').on("click", function(e) {
     $('#donateDiv').removeClass("hidden");
   });
 
@@ -221,7 +224,7 @@ alert("3 " + petfinder.pets.pet.options.option[z][1])
     script.src = src;
   }
 
-  $('#groomLink').on("click", function(e) {
+  $('.finder').on("click", function(e) {
     $('#groomSection').empty();
     window.groomCall = function() {
       var service = new google.maps.places.PlacesService($('.groom').get(0));
@@ -239,7 +242,7 @@ alert("3 " + petfinder.pets.pet.options.option[z][1])
           commonVars.groomPhone = response2.formatted_phone_number;
 
           if (commonVars.website == null) {
-            $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="http://www.google.com/#q=' + commonVars.bizName + '"><h4>' + commonVars.bizName + '</h4></a><br>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + commonVars.rated + '</div>');
+            $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="http://www.google.com/#q=' + commonVars.bizName + '"><h4>' + commonVars.bizName + '</h4></a>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + "Google Places rating: " + commonVars.rated + '</div>');
             $('.cappy').css("text-transform", "capitalize");
           } else if (commonVars.website != null) {
             $('.groom').append('<div class="col-4 groom2"><a target="_blank" href="' + commonVars.website + '"><h4>' + commonVars.bizName + '</h4></a>' + commonVars.bizAddress + '<br>' + commonVars.groomPhone + '<br><span class="cappy">' + commonVars.types[0].replace(/_/g, " ") + ' / ' + commonVars.types[1].replace(/_/g, " ") + '</span><br>' + "Google Places rating: " + commonVars.rated + '</div>');
