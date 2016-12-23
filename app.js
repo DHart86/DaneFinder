@@ -44,7 +44,15 @@ $(document).ready(function(e) {
     //alert(JSON.stringify(petfinder.pets.pet.options.option))
     for (var z in petfinder.pets.pet.options.option) {
 alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
-alert(Object.values(petfinder.pets.pet.options.option[z]))
+
+
+
+      if (petfinder.pets.pet.options.option[z] == '{"$t":"hasShots"}') {
+       // alert("has shots")
+        commonVars.needs = "I have my shots!"
+      }
+
+
 
       if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
        // alert("has shots")
