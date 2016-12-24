@@ -390,7 +390,7 @@ p {
   display: block;
   font-size: 80px;
   font-family: 'Bubblegum Sans', cursive;
-  background-color: lightskyblue;
+  background-color: darkturquoise;
   color: white;
   border: 6px double white;
   text-shadow: 2px 2px 6px black;
@@ -479,7 +479,7 @@ select {
 #zip,
 select,
 #zipRadius {
-  border: 2px solid lightskyblue;
+  border: 2px solid darkturquoise;
   font-size: 17px;
   border-radius: 5px;
   padding-top: 5px;
@@ -509,7 +509,7 @@ option {
 }
 
 button {
-  background-color: lightskyblue;
+  background-color: darkturquoise;
   font-family: 'Bubblegum Sans', cursive;
 }
 
@@ -530,7 +530,7 @@ button > span {
 .checker {
   -webkit-appearance: none;
   background-color: #DDD;
-  border: 2px solid lightskyblue;
+  border: 2px solid darkturquoise;
   border-radius: 2px;
   display: inline-block;
   margin: auto;
