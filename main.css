@@ -213,7 +213,7 @@ input {
 }
 
 #info:hover {
-  background-color: #ff4d4d;
+  background-color: #dd4b5f;
   text-shadow: 2px 2px #666;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -404,7 +404,7 @@ a {
 }
 
 a:hover {
-  color: #F23E42;
+  color: #dd4b5f;
 }
 
 select {
