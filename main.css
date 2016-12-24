@@ -199,7 +199,7 @@ input {
 
 #info {
   width: 100%;
-  background-color: #ff6666;
+  background-color: #f6546a;
   color: white;
   border: 1px solid #B05456;
   padding: 10px;
@@ -368,7 +368,7 @@ p {
 
 #spinny:hover {
   transform: rotate(720deg);
-  text-shadow: -2px -2px 20px #ff6666;
+  text-shadow: -2px -2px 20px #f6546a;
 }
 
 #rowAnchor {
@@ -398,7 +398,7 @@ p {
 }
 
 a {
-  color: #ff6666;
+  color: #f6546a;
   font-weight: bold;
   font-size: 19px;
 }
@@ -464,7 +464,7 @@ pre {
 
 #mapBorder {
   height: 410px;
-  background-color: #ff6666;
+  background-color: #f6546a;
   padding: 5px;
   margin-top: 5px;
 }
@@ -473,7 +473,7 @@ input,
 select {
   background-color: white;
   margin-bottom: 4px;
-  color: #ff6666;
+  color: #f6546a;
 }
 
 #zip,
@@ -497,7 +497,7 @@ option {
 }
 
 ::-webkit-input-placeholder {
-  color: #ff6666;
+  color: #f6546a;
 }
 
 #amItem {
@@ -523,7 +523,7 @@ button > span {
 }
 
 #selectWrap {
-  color: #ff6666;
+  color: #f6546a;
   font-weight: bold;
 }
 
@@ -541,7 +541,7 @@ button > span {
 }
 
 .checker:checked {
-  background: #ff6666;
+  background: #f6546a;
   border: 2px solid #6FC7C3;
 }
 
@@ -575,7 +575,7 @@ label {
 
 .close {
   position: relative;
-  color: #ff6666;
+  color: #f6546a;
   top: 10px;
   display: inline-block;
   font-size: 50px;

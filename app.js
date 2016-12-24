@@ -50,24 +50,24 @@ alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
         alert(" yay has shots")
         commonVars.needs = "I have my shots!"
       }
-      if (d.$t == "housetrained") {
+      if else (d.$t == "housetrained") {
         alert("trained?")
         commonVars.needs += "<br>I'm housetrained!"
       }
-      if (d.$t == "altered") {
+      if else (d.$t == "altered") {
         commonVars.needs += "<br>I'm already spayed/neutered"
       }
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "noKids") {
+      if else (Object.values(petfinder.pets.pet.options.option[z]) == "noKids") {
         commonVars.needs += "<br>I'm not too good around children!"
       }
-      if (d.$t == "noDogs") {
+      if else (d.$t == "noDogs") {
         commonVars.needs += "<br>I like to be the only dog in the house"
         alert("hmmm")
       }
-      if (d.$t == "noCats") {
+      if else (d.$t == "noCats") {
         commonVars.needs += "<br>Grrr I don't like cats!"
       }
-      if (d.$t == "specialNeeds") {
+      if else (d.$t == "specialNeeds") {
         commonVars.needs += "<br>I've got some special needs"
       }
     }
