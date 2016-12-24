@@ -44,37 +44,29 @@ $(document).ready(function(e) {
     //alert(JSON.stringify(petfinder.pets.pet.options.option))
     for (var z in petfinder.pets.pet.options.option) {
 alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
-
-
-
-      if (petfinder.pets.pet.options.option[z] == '{"$t":"hasShots"}') {
-        alert("has shots")
+      var d = petfinder.pets.pet.options.option[z];
+      alert(d.$t)
+      if (d.$t == "hasShots") {
+        alert(" yay has shots")
         commonVars.needs = "I have my shots!"
       }
-
-
-
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "hasShots") {
-       // alert("has shots")
-        commonVars.needs = "I have my shots!"
-      }
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "housetrained") {
-      //  alert("trained?")
+      if (d.$t == "housetrained") {
+        alert("trained?")
         commonVars.needs += "<br>I'm housetrained!"
       }
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "altered") {
+      if (d.$t == "altered") {
         commonVars.needs += "<br>I'm already spayed/neutered"
       }
       if (Object.values(petfinder.pets.pet.options.option[z]) == "noKids") {
         commonVars.needs += "<br>I'm not too good around children!"
       }
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "noDogs") {
+      if (d.$t == "noDogs") {
         commonVars.needs += "<br>I like to be the only dog in the house"
       }
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "noCats") {
+      if (d.$t == "noCats") {
         commonVars.needs += "<br>Grrr I don't like cats!"
       }
-      if (Object.values(petfinder.pets.pet.options.option[z]) == "specialNeeds") {
+      if (d.$t == "specialNeeds") {
         commonVars.needs += "<br>I've got some special needs"
       }
     }
