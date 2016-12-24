@@ -252,7 +252,7 @@ input {
 }
 
 #nextPet:hover {
-  background-color: #6cc3f9;
+  background-color: #008285;
 }
 
 #nextPet:hover span:after {
@@ -293,7 +293,7 @@ input {
 }
 
 #prevBtn:hover {
-  background-color: #6cc3f9;
+  background-color: #008285;
 }
 
 #prevBtn:hover span:after {
@@ -310,7 +310,7 @@ input {
 }
 
 .reset:hover {
-  background-color: #6cc3f9;
+  background-color: #008285;
 }
 
 #adopt {
@@ -326,7 +326,7 @@ input {
 }
 
 #adopt:hover {
-  background-color: #6cc3f9;
+  background-color: #008285;
   text-shadow: 2px 2px #666;
   box-shadow: 0 5px #666;
   transform: translateY(4px);

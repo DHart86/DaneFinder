@@ -62,6 +62,7 @@ alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
       }
       if (d.$t == "noDogs") {
         commonVars.needs += "<br>I like to be the only dog in the house"
+        alert("hmmm")
       }
       if (d.$t == "noCats") {
         commonVars.needs += "<br>Grrr I don't like cats!"
