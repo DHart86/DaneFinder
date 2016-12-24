@@ -43,15 +43,11 @@ $(document).ready(function(e) {
     
     //alert(JSON.stringify(petfinder.pets.pet.options.option))
     for (var z in petfinder.pets.pet.options.option) {
-alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
       var d = petfinder.pets.pet.options.option[z];
-      alert(d.$t)
       if (d.$t == "hasShots") {
-        alert(" yay has shots")
         commonVars.needs = "I have my shots!"
       }
       else if (d.$t == "housetrained") {
-        alert("trained?")
         commonVars.needs += "<br>I'm housetrained!"
       }
       else if (d.$t == "altered") {
@@ -62,7 +58,6 @@ alert(JSON.stringify(petfinder.pets.pet.options.option[z]))
       }
       else if (d.$t == "noDogs") {
         commonVars.needs += "<br>I like to be the only dog in the house"
-        alert("hmmm")
       }
       else if (d.$t == "noCats") {
         commonVars.needs += "<br>Grrr I don't like cats!"
