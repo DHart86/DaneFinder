@@ -347,6 +347,7 @@ input {
   z-index: 4;
   border-radius: 5px;
   padding-bottom: 15px;
+  overflow-wrap: break-word;
 }
 
 p {
