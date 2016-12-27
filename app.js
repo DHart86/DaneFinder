@@ -19,7 +19,6 @@ $(document).ready(function(e) {
       url: commonVars.url + commonVars.zip + '&offset=' + commonVars.offSet + commonVars.option + commonVars.radius + '&callback=?',
       dataType: 'jsonp',
       success: function(data) {
-        //alert(JSON.stringify(data, '',2))
         addy(data);
       },
     });
@@ -40,9 +39,7 @@ $(document).ready(function(e) {
     //DETAILS
     //////////
 
-    
-    //alert(JSON.stringify(petfinder.pets.pet.options.option))
-    for (var z in petfinder.pets.pet.options.option) {
+        for (var z in petfinder.pets.pet.options.option) {
       var d = petfinder.pets.pet.options.option[z];
       if (d.$t == "hasShots") {
         commonVars.needs = "I have my shots!"
@@ -231,7 +228,7 @@ $(document).ready(function(e) {
         service.getDetails({
           placeId: commonVars.placeId
         }, function(response2, status) {
-          //alert(JSON.stringify(response2, '', 2))
+      
           commonVars.website = response2.website;
           commonVars.bizName = response2.name;
           commonVars.bizAddress = response2.vicinity;
@@ -253,11 +250,9 @@ $(document).ready(function(e) {
         query: commonVars.groomZip + "dog grooming"
       }, function(response, status) {
         console.log(JSON.stringify(response, '', 2))
-          // alert(JSON.stringify(response[0].place_id, '', 2))
 
         var x = 0;
         for (var i in response) {
-          // alert(response)
           commonVars.rating = response[x].rating;
           commonVars.placeId = response[x].place_id;
           x++;
