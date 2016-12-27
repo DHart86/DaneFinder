@@ -12,7 +12,7 @@ In addition to the core feature of the app, at the bottom there are a couple add
 Home screen and filter options
 
 
-![ScreenShot](https://raw.github.com/dhart86/DaneFinder/blob/master/readScreen2.jpg)
+![ScreenShot](https://raw.github.com/dhart86/DaneFinder/master/readScreen2.jpg)
 
 Sample result page. On mobile the top nav buttons are replaced by the swipe feature. 
 
