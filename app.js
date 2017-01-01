@@ -102,9 +102,9 @@ $(document).ready(function(e) {
     }
   });
   //////
-  ////////////Swipe Right New Pet
+  ////////////Swipe New Pet
 
-  $('.col-12').on("swiperight", function(e) {
+  $('.col-12').on("swipeleft", function(e) {
     if ($('#zip').val().length == 5) {
       e.preventDefault();
       commonVars.offSet++
@@ -117,9 +117,9 @@ $(document).ready(function(e) {
   });
 
   /////
-  /////////Swipe Left Last Pet
+  /////////Swipe Last Pet
 
-  $('.col-12').on("swipeleft", function(e) {
+  $('.col-12').on("swiperight", function(e) {
     e.preventDefault();
     if (commonVars.offSet > 0) {
       commonVars.offSet--;
